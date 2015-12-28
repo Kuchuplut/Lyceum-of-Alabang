@@ -1,0 +1,38 @@
+package com.lyceum.dao.mybatis;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.practiceweb.dao.EmployeeRepository;
+import com.practiceweb.mybatis.mappers.EmployeeMapper;
+
+public class MybatisEmployeeRepository extends MybatisClient implements EmployeeRepository{
+
+	public MybatisEmployeeRepository(MybatisConnectionManager connectionManager) {
+		super(connectionManager);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String getLastEmployeeCode() {
+		// TODO Auto-generated method stub
+		
+		SqlSession session = getSqlSessionFactory().openSession();
+		try{
+			
+			EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
+			String strEmployeeCode = employeeMapper.getLastEmployeeCode();
+			if (strEmployeeCode == null || strEmployeeCode.equals("")){
+				throw new IllegalArgumentException();
+			}
+			return strEmployeeCode;
+			
+		}catch(Exception e){
+			
+		}finally{
+			session.close();
+		}
+		
+		return "00000";
+	}
+
+}

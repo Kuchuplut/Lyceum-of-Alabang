@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.lyceum.dao.mybatis.mappers.AddressMapper" >
+	
+	<!-- INSERT QUERIES -->
+	
+		<insert id="insertHouseNo">
+			INSERT INTO tblHouseNo(strHouseNoDesc) VALUES (#{address.strHouseNo})
+		</insert>
+		
+		<insert id="insertStreet">
+			INSERT INTO tblStreet(strStreetDesc) VALUES (#{address.strStreet})
+		</insert>
+		
+		<insert id="insertBarangay">
+			INSERT INTO tblBarangay(strBarangayDesc) VALUES (#{address.strBarangay})
+		</insert>
+		
+		<insert id="insertCity">
+			INSERT INTO tblCity(strCityDesc) VALUES (#{address.strCity})
+		</insert>
+		
+		<insert id="insertProvince">
+			INSERT INTO tblProvince(strProvinceDesc) VALUES (#{address.strProvince})
+		</insert>
+	
+	<!-- END INSERT QUERIES -->
+	
+	</mapper>
+	

@@ -1,0 +1,66 @@
+package com.practiceweb.dao.mybatis;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.practiceweb.dao.AccountRepository;
+import com.practiceweb.model.User;
+import com.practiceweb.mybatis.mappers.AccountMapper;
+import com.practiceweb.mybatis.mappers.EmployeeMapper;
+
+public class MybatisAccountRepository extends MybatisClient implements AccountRepository{
+
+	public MybatisAccountRepository(MybatisConnectionManager connectionManager) {
+		super(connectionManager);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String saveAccount(User account) {
+		// TODO Auto-generated method stub
+		SqlSession session = getSqlSessionFactory().openSession();
+		try{
+			
+			AccountMapper accountMapper = session.getMapper(AccountMapper.class);
+			EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
+			employeeMapper.addEmployeeDetails(account.getEmployee());
+			account.getEmployee().setStrEmployeeCode(employeeMapper.getEmployeeCode(account.getEmployee().getName()));
+			employeeMapper.addEmployeePosition(account.getEmployee());
+			accountMapper.addEmployeeAccount(account);
+			session.commit();
+			return "success";
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			session.rollback();
+		}finally{
+			session.close();
+		}
+		return "error-saving";
+	}
+
+	@Override
+	public boolean checkAccountExist(User account) {
+		// TODO Auto-generated method stub
+		SqlSession session = getSqlSessionFactory().openSession();
+		
+		try{
+			
+			EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
+			int intCount = employeeMapper.employeeExists(account.getEmployee().getName());
+			if (intCount > 0){
+				return true;
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			
+		}finally{
+			session.close();
+		}
+		
+		return false;
+	}
+	
+	
+
+}

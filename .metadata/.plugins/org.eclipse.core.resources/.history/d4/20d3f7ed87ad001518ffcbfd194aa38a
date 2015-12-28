@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation"
+        value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.custom.i18n.resources"
+        value="ApplicationResources" />
+ 
+    <package name="default" extends="struts-default" namespace="/">
+    
+ 		<!-- Login Interceptor -->
+ 		<interceptors>
+ 		
+ 			<interceptor class="com.lyceum.interceptor.LoginInterceptor"
+ 						 name="loginInterceptor">			 
+ 			</interceptor>
+ 			
+ 			<interceptor class="com.lyceum.interceptor.SessionInterceptor"
+ 						 name="sessionInterceptor">
+ 			</interceptor>
+ 			
+ 			<interceptor class="org.apache.struts2.interceptor.TokenInterceptor"
+ 						 name="token" />
+ 			<interceptor class="org.apache.struts2.interceptor.TokenSessionStoreInterceptor"
+ 						 name="tokenSession" />
+ 			
+ 			<interceptor-stack name="sessionStack">
+ 				
+ 				<interceptor-ref name="sessionInterceptor" />
+ 				<interceptor-ref name="defaultStack" />
+ 			</interceptor-stack>
+ 			
+ 			<interceptor-stack name="loginStack">
+ 			
+ 				<interceptor-ref name="loginInterceptor" />
+ 				<interceptor-ref name="token" />
+ 				<interceptor-ref name="defaultStack" />
+ 			
+ 			</interceptor-stack>
+ 		
+ 		</interceptors>
+ 	
+    	<!--Log in Action-->
+    	<action name="login" class="com.lyceum.action.LoginAction" method="login">
+        	
+            <result name="success" type="redirect">home</result>
+            <result name="login">JSP/home.jsp</result>
+            
+        </action>
+        
+        <!-- Home link action -->
+        <action name="home" class="com.lyceum.action.LoginAction" method="home">
+        	
+        	<interceptor-ref name="loginStack" />
+        	<result name="login">JSP/home.jsp</result>
+        	<result name="success">JSP/welcome.jsp</result>
+        
+        </action>
+    	
+    </package>
+    
+</struts>
