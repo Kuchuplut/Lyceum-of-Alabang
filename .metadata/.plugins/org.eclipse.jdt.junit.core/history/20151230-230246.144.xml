@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MybatisStudentRepositoryTest" project="lyceum-website" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest" time="0.414">
+    <testcase name="testAddStudent" classname="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest" time="0.414">
+      <error>org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error building SqlSession.&#13;
+### The error may exist in com/lyceum/dao/mybatis/mappers/StudentMapper.xml&#13;
+### The error occurred while processing mapper_resultMap[StudentResultMap]&#13;
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalStateException: Mapping is missing column attribute for property &#13;
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:82)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:66)&#13;
+	at com.lyceum.dao.mybatis.MybatisConnectionManager.establishConnection(MybatisConnectionManager.java:20)&#13;
+	at com.lyceum.dao.mybatis.MybatisStudentRepositoryTest.setUp(MybatisStudentRepositoryTest.java:29)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:132)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:110)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:128)&#13;
+	at junit.framework.TestResult.run(TestResult.java:113)&#13;
+	at junit.framework.TestCase.run(TestCase.java:124)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:238)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalStateException: Mapping is missing column attribute for property &#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:115)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:95)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)&#13;
+	... 17 more&#13;
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalStateException: Mapping is missing column attribute for property &#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)&#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:340)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:113)&#13;
+	... 19 more&#13;
+Caused by: java.lang.IllegalStateException: Mapping is missing column attribute for property &#13;
+	at org.apache.ibatis.mapping.ResultMapping$Builder.validate(ResultMapping.java:155)&#13;
+	at org.apache.ibatis.mapping.ResultMapping$Builder.build(ResultMapping.java:140)&#13;
+	at org.apache.ibatis.builder.MapperBuilderAssistant.buildResultMapping(MapperBuilderAssistant.java:415)&#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildResultMappingFromContext(XMLMapperBuilder.java:378)&#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:280)&#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:252)&#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:244)&#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116)&#13;
+	... 22 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

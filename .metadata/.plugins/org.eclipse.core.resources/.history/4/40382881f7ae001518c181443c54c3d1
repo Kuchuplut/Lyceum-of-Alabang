@@ -1,0 +1,28 @@
+package com.lyceum.dao.mybatis;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class MybatisStudentRepositoryTest extends TestCase{
+
+	public MybatisStudentRepositoryTest(String testName){
+		super(testName);
+	}
+	
+	@Override
+	public void setUp(){
+		
+		
+		
+	}
+	
+	public static Test suite() {
+		TestSuite suite = new TestSuite();
+		
+		suite.addTest(new MybatisConnectionManagerTest("testEstablishConnection"));
+		
+		return suite;
+	}
+	
+}

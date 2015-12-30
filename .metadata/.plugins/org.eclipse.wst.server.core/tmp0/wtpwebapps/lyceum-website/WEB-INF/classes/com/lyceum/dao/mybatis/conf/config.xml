@@ -7,7 +7,9 @@
 	<properties resource="database.properties" />
 	
 	<typeAliases>
-		
+		<typeAlias type="com.lyceum.model.Student" alias="Student"/>
+		<typeAlias type="com.lyceum.model.Name" alias="Name"/>
+		<typeAlias type="com.lyceum.model.Account" alias="Account"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -23,7 +25,8 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="com/lyceum/dao/mybatis/mappers/AddressMapper.xml"/>
+		<mapper resource="com/lyceum/dao/mybatis/mappers/PersonMapper.xml"/>
+		<mapper resource="com/lyceum/dao/mybatis/mappers/StudentMapper.xml"/>
 	</mappers>
 	
 </configuration>

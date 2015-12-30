@@ -1,0 +1,7 @@
+package com.lyceum.dao.mybatis;
+
+import junit.framework.TestCase;
+
+public class MybatisStudentRepositoryTest extends TestCase{
+
+}

@@ -5,3 +5,14 @@
 1451443479715	Move 11 resources to 'views'
 1451443982817	Move 11 resources to 'WebContent'
 1451443989952	Delete element
+1451444146890	Rename resource 'student-sign-up.html'
+1451446357867	Rename resource 'student-sign-up.jsp'
+1451478330312	Rename type 'AddressMapper'
+1451478339676	Rename resource 'AddressMapper.xml'
+1451478455741	Delete element
+1451478462430	Delete element
+1451478491425	Delete element
+1451478495393	Delete element
+1451478892499	Delete element
+1451480573554	Delete element
+1451481247433	Rename type 'MybatisStudentRepository'

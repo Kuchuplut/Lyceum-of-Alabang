@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MybatisStudentRepositoryTest" project="lyceum-website" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest" time="8.572">
+    <testcase name="testAddStudent" classname="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest" time="8.572">
+      <error>org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error building SqlSession.&#13;
+### The error may exist in SQL Mapper Configuration&#13;
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Address'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.lyceum.model.Address&#13;
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:82)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:66)&#13;
+	at com.lyceum.dao.mybatis.MybatisConnectionManager.establishConnection(MybatisConnectionManager.java:20)&#13;
+	at com.lyceum.dao.mybatis.MybatisStudentRepositoryTest.setUp(MybatisStudentRepositoryTest.java:29)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:132)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:110)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:128)&#13;
+	at junit.framework.TestResult.run(TestResult.java:113)&#13;
+	at junit.framework.TestCase.run(TestCase.java:124)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:238)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Address'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.lyceum.model.Address&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:115)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:95)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)&#13;
+	... 17 more&#13;
+Caused by: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'Address'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.lyceum.model.Address&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:136)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:103)&#13;
+	... 19 more&#13;
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.lyceum.model.Address&#13;
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)&#13;
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)&#13;
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.typeAliasesElement(XMLConfigBuilder.java:129)&#13;
+	... 20 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

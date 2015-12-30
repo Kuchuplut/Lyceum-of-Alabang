@@ -4,21 +4,37 @@ import java.util.Date;
 
 public class Person {
 
+	private int skPerson;
 	private Name name;
-	private Address address;
+	private String strAddress;
 	private long birthday;
 	private String strGender;
+	private String strEmail;
+	private String strContactNo;
+	
+	public int getSkPerson() {
+		return skPerson;
+	}
+	public void setSkPerson(int skPerson) {
+		this.skPerson = skPerson;
+	}
+	public String getStrContactNo() {
+		return strContactNo;
+	}
+	public void setStrContactNo(String strContactNo) {
+		this.strContactNo = strContactNo;
+	}
 	public Name getName() {
 		return name;
 	}
 	public void setName(Name name) {
 		this.name = name;
 	}
-	public Address getAddress() {
-		return address;
+	public String getStrAddress() {
+		return strAddress;
 	}
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setStrAddress(String address) {
+		this.strAddress = address;
 	}
 	public Date getBirthday() {
 		return new Date(birthday);
@@ -26,54 +42,11 @@ public class Person {
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday.getTime();
 	}
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((address == null) ? 0 : address.hashCode());
-		result = prime * result + (int) (birthday ^ (birthday >>> 32));
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result
-				+ ((strGender == null) ? 0 : strGender.hashCode());
-		return result;
+	public String getStrEmail() {
+		return strEmail;
 	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (!(obj instanceof Person)) {
-			return false;
-		}
-		Person other = (Person) obj;
-		if (address == null) {
-			if (other.address != null) {
-				return false;
-			}
-		} else if (!address.equals(other.address)) {
-			return false;
-		}
-		if (birthday != other.birthday) {
-			return false;
-		}
-		if (name == null) {
-			if (other.name != null) {
-				return false;
-			}
-		} else if (!name.equals(other.name)) {
-			return false;
-		}
-		if (strGender == null) {
-			if (other.strGender != null) {
-				return false;
-			}
-		} else if (!strGender.equals(other.strGender)) {
-			return false;
-		}
-		return true;
+	public void setStrEmail(String strEmail) {
+		this.strEmail = strEmail;
 	}
 	public String getStrGender() {
 		return strGender;

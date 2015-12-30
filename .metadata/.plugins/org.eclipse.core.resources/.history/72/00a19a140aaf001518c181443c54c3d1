@@ -1,0 +1,10 @@
+package com.lyceum.dao;
+
+import com.lyceum.model.Student;
+
+public interface StudentRepository {
+
+	public String addStudent(Student student);
+	public List<Student>getAllStudent();
+	
+}

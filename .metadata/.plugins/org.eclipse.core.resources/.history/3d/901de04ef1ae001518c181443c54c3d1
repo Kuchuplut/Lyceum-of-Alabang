@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper>
+	
+	<!-- INSERT QUERIES -->
+	
+		<insert id="insertPerson">
+			INSERT INTO tblPerson (skNameFK, strGenderCodeFK, datBirthday)
+			VALUES(
+				(SELECT skName FROM tblName
+				 WHERE strFirstName=#{name.strFirstName}
+				 AND strMiddleName=#{name.strMiddleName}
+				 AND strLastName=#{name.strLastName}),
+				(SELECT strGenderCode FROM tblGender
+				 WHERE strGender=#{strGender}),
+				 #{birthday}
+			)
+		</insert>
+		
+		<insert id="insertName">
+		
+			INSERT INTO tblName
+			(strFirstName, strMiddleName, strLastName)
+			VALUES
+			(#{strFirstName}, #{strMiddleName}, #{strLastName})
+		
+		</insert>
+		
+		<insert id="insertAddress">
+			INSERT INTO tblAddress (strAddressText, skPersonFK)
+			VALUES  (#{person.strAddress},
+					(SELECT skPerson FROM tblPerson p
+						INNER JOIN tblName n ON p.skNameFK = n.skName
+						WHERE n.strFirstName = #{person.name.strFirstName}
+						AND n.strMiddleName = #{person.name.strMiddleName}
+						AND n.strLastName = #{person.name.strLastName})
+			)
+		</insert>
+		
+		<insert id="insertEmail">
+			INSERT INTO tblEmail (strEmailDesc, skPersonFK)
+			VALUES (#{person.strEmail},
+					(SELECT skPerson FROM tblPerson p
+						INNER JOIN tblName n ON p.skNameFK = n.skName
+						WHERE n.strFirstName = #{person.name.strFirstName}
+						AND n.strMiddleName = #{person.name.strMiddleName}
+						AND n.strLastName = #{person.name.strLastName})
+			)
+		</insert>"
+	
+	<!-- END INSERT QUERIES -->
+	
+	</mapper>
