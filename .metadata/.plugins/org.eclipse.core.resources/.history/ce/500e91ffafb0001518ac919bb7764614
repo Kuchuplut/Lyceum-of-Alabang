@@ -1,0 +1,26 @@
+package com.lyceum.service.impl;
+
+import com.lyceum.dao.ConnectionManager;
+import com.lyceum.dao.mybatis.MybatisConnectionManager;
+
+import junit.framework.TestCase;
+
+public class StudentServiceImplTest extends TestCase{
+
+	public StudentServiceImplTest(String testName){
+		super(testName);
+	}
+	
+	@Override
+	public void setUp(){
+		
+		ConnectionManager connectionManager = new MybatisConnectionManager();
+		
+	}
+	
+	public void getStudentCode(){
+		
+		
+	}
+	
+}

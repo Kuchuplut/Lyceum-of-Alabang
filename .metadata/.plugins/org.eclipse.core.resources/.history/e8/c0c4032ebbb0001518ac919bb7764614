@@ -1,0 +1,93 @@
+package com.lyceum.actions;
+
+import com.lyceum.model.Student;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class SignUpAction extends ActionSupport{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Student student;
+	private String strHouseNo;
+	private String strStreet;
+	private String strBarangay;
+	private String strSubdivision;
+	private String strCity;
+	private String strProvince;
+	private Date datBirthday;
+	
+	public String getStrBirthday() {
+		return strBirthday;
+	}
+
+	public void setStrBirthday(String strBirthday) {
+		this.strBirthday = strBirthday;
+	}
+
+	public String getStrHouseNo() {
+		return strHouseNo;
+	}
+
+	public void setStrHouseNo(String strHouseNo) {
+		this.strHouseNo = strHouseNo;
+	}
+
+	public String getStrStreet() {
+		return strStreet;
+	}
+
+	public void setStrStreet(String strStreet) {
+		this.strStreet = strStreet;
+	}
+
+	public String getStrBarangay() {
+		return strBarangay;
+	}
+
+	public void setStrBarangay(String strBarangay) {
+		this.strBarangay = strBarangay;
+	}
+
+	public String getStrSubdivision() {
+		return strSubdivision;
+	}
+
+	public void setStrSubdivision(String strSubdivision) {
+		this.strSubdivision = strSubdivision;
+	}
+
+	public String getStrCity() {
+		return strCity;
+	}
+
+	public void setStrCity(String strCity) {
+		this.strCity = strCity;
+	}
+
+	public String getStrProvince() {
+		return strProvince;
+	}
+
+	public void setStrProvince(String strProvince) {
+		this.strProvince = strProvince;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public String execute(){
+		
+		System.out.println("Practice");
+		System.out.println(getStudent().getStrStudentCode());
+		return "success";
+		
+	}
+
+}

@@ -8,5 +8,6 @@ public interface StudentRepository {
 
 	public String addStudent(Student student);
 	public List<Student>getAllStudent();
+	public String getLastStudentCode();
 	
 }

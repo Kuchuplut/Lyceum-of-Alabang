@@ -62,4 +62,21 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 		return null;
 	}
 
+	@Override
+	public String getLastStudentCode() {
+		// TODO Auto-generated method stub
+		SqlSession session = getSqlSessionFactory().openSession();
+		try{
+			
+			StudentMapper studentMapper = session.getMapper(StudentMapper.class);
+			return studentMapper.getLastStudentCode();
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			session.close();
+		}
+		return null;
+	}
+
 }

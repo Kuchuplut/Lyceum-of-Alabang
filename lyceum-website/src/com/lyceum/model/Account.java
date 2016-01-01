@@ -24,5 +24,8 @@ public class Account {
 	public void setStrAccountType(String strAccountType) {
 		this.strAccountType = strAccountType;
 	}
+	public String toString(){
+		return this.strUsername;
+	}
 	
 }

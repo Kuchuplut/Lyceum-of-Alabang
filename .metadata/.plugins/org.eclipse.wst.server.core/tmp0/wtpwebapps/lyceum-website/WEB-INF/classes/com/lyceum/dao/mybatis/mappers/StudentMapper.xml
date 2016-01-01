@@ -27,6 +27,10 @@
 			<result property="birthday" column="p.datBirthday"/>
 			<association property="name" column="n.skName" javaType="Name" resultMap="NameResultMap"/>
 		</resultMap>
+		
+		<resultMap id="StudentCodeResultMap" type="java.lang.String">
+			<result property="strStudentCode" column="strStudentCode" />
+		</resultMap>
 	
 	<!-- END RESULTMAPS -->
 	
@@ -51,6 +55,12 @@
 			INNER JOIN tblAddress a ON a.skPersonFK = p.skPerson
 			INNER JOIN tblContactNo c ON c.skPersonFK = p.skPerson
 			INNER JOIN tblEmail e ON e.skPersonFK = p.skPerson
+		
+		</select>
+		
+		<select id="getLastStudentCode" resultMap="StudentCodeResultMap">
+		
+			SELECT strStudentCode FROM tblStudent ORDER BY strStudentCode DESC LIMIT 1
 		
 		</select>
 	

@@ -1,0 +1,20 @@
+package com.lyceum.services.impl;
+
+import com.lyceum.business.StudentBusiness;
+import com.lyceum.services.StudentService;
+
+public class StudentServiceImpl implements StudentService{
+
+	private StudentBusiness studentBusiness;
+	
+	public void setStudentBusiness(StudentBusiness studentBusiness){
+		this.studentBusiness = studentBusiness;
+	}
+	
+	@Override
+	public String getStudentCode() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

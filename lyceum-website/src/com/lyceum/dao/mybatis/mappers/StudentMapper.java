@@ -9,5 +9,6 @@ public interface StudentMapper {
 	public void insertStudent(Student student);
 	public void insertAccount(Student student);
 	public List<Student> getAllStudentInfo();
+	public String getLastStudentCode();
 	
 }

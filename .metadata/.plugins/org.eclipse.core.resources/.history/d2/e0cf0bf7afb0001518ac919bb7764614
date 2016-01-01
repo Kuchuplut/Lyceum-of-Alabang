@@ -1,0 +1,21 @@
+package com.lyceum.service.impl;
+
+import junit.framework.TestCase;
+
+public class StudentServiceImplTest extends TestCase{
+
+	public StudentServiceImplTest(String testName){
+		super(testName);
+	}
+	
+	@Override
+	public void setUp(){
+		
+	}
+	
+	public void getStudentCode(){
+		
+		
+	}
+	
+}

@@ -1,0 +1,40 @@
+package com.lyceum.service.impl;
+
+import com.lyceum.business.StudentBusiness;
+import com.lyceum.dao.ConnectionManager;
+import com.lyceum.dao.StudentRepository;
+import com.lyceum.dao.mybatis.MybatisConnectionManager;
+import com.lyceum.dao.mybatis.MybatisStudentRepository;
+
+import junit.framework.TestCase;
+
+public class StudentServiceImplTest extends TestCase{
+
+	private ConnectionManager connectionManager;
+	private StudentRepository studentRepository;
+	private StudentBusiness studentBusiness;
+	
+	public StudentServiceImplTest(String testName){
+		super(testName);
+	}
+	
+	@Override
+	public void setUp() throws Exception{
+		
+		connectionManager = new MybatisConnectionManager();
+		connectionManager.establishConnection();
+		studentRepository = new MybatisStudentRepository((MybatisConnectionManager)connectionManager)
+		
+	}
+	
+	@Override
+	public void tearDown(){
+		connectionManager = null;
+	}
+	
+	public void getStudentCodeTest(){
+		
+		
+	}
+	
+}
