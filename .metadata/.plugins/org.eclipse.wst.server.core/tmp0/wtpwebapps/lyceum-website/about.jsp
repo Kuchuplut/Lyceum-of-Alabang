@@ -13,7 +13,7 @@
     <div class="nav-wrapper white">
       <a href="#!" class="brand-logo left"><img src="./pictures/icon.png"> </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html" class="yellow-text text-darken-2"><i class="material-icons left">home</i>Home</a></li>
+        <li><a href="index.jsp" class="yellow-text text-darken-2"><i class="material-icons left">home</i>Home</a></li>
       </ul>
     </div>
   </nav>
