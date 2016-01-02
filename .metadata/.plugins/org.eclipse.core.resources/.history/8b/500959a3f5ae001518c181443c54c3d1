@@ -1,0 +1,15 @@
+package com.lyceum.model;
+
+public class Account {
+
+	private String strPassword;
+
+	public String getStrPassword() {
+		return strPassword;
+	}
+
+	public void setStrPassword(String strPassword) {
+		this.strPassword = strPassword;
+	}
+	
+}

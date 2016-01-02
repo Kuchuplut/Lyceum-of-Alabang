@@ -15,7 +15,7 @@ public class MybatisConnectionManager implements ConnectionManager {
 	@Override
 	public void establishConnection() throws Exception {
 		if (sqlSessionFactory == null) {
-			String resource = "com/practiceweb/dao/mybatis/conf/config.xml";
+			String resource = "com/lyceum/dao/mybatis/conf/config.xml";
 			InputStream inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		}

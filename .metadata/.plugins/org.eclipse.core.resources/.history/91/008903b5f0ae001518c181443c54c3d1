@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.lyceum.dao.mybatis.mappers.NameMapper" >
+	
+	<!-- INSERT QUERIES -->
+	
+		<insert id="insertName">
+		
+			INSERT INTO tblName
+			(strFirstName, strMiddleName, strLastName)
+			VALUES
+			(#{strFirstName}, #{strMiddleName}, #{strLastName})
+		
+		</insert>
+	
+	<!-- END INSERT QUERIES -->
+	
+	</mapper>

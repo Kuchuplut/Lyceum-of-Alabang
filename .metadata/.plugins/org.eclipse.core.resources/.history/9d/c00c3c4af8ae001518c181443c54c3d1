@@ -1,0 +1,49 @@
+package com.lyceum.dao.mybatis;
+
+import com.lyceum.dao.ConnectionManager;
+import com.lyceum.dao.StudentRepository;
+import com.lyceum.model.Name;
+import com.lyceum.model.Student;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class MybatisStudentRepositoryTest extends TestCase{
+
+	private StudentRepository studentRepository;
+	Student student;
+	
+	public MybatisStudentRepositoryTest(String testName){
+		super(testName);
+	}
+	
+	@Override
+	public void setUp() throws Exception{
+		
+		ConnectionManager connManager = new MybatisConnectionManager();
+		connManager.establishConnection();
+		studentRepository = new MybatisStudentRepository((MybatisConnectionManager)connManager);
+		
+	}
+	
+	public void testAddStudent(){
+		
+		student = new Student();
+		Name name = new Name();
+		name.setStrFirstName("Ken");
+		name.setStrMiddleName("Malit");
+		name.setStrLastName("Layug");
+		student.setName(name);
+		
+	}
+	
+	public static Test suite() {
+		TestSuite suite = new TestSuite();
+		
+		suite.addTest(new MybatisConnectionManagerTest("testEstablishConnection"));
+		
+		return suite;
+	}
+	
+}

@@ -1,0 +1,8 @@
+package com.lyceum.model;
+
+public class Student {
+
+	private Person person;
+	private String strStudentCode;
+	
+}

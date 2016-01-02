@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MybatisStudentRepositoryTest" project="lyceum-website" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest" time="0.289">
+    <testcase name="testAddStudent" classname="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest" time="0.289">
+      <error>org.apache.ibatis.exceptions.PersistenceException: &#13;
+### Error building SqlSession.&#13;
+### The error may exist in com/lyceum/dao/mybatis/mappers/PersonMapper.xml&#13;
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 66; Attribute "namespace" must be declared for element type "mapper".&#13;
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:82)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:66)&#13;
+	at com.lyceum.dao.mybatis.MybatisConnectionManager.establishConnection(MybatisConnectionManager.java:20)&#13;
+	at com.lyceum.dao.mybatis.MybatisStudentRepositoryTest.setUp(MybatisStudentRepositoryTest.java:29)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:132)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:110)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:128)&#13;
+	at junit.framework.TestResult.run(TestResult.java:113)&#13;
+	at junit.framework.TestCase.run(TestCase.java:124)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:238)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 66; Attribute "namespace" must be declared for element type "mapper".&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:115)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:95)&#13;
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)&#13;
+	... 17 more&#13;
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 66; Attribute "namespace" must be declared for element type "mapper".&#13;
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:259)&#13;
+	at org.apache.ibatis.parsing.XPathParser.&lt;init&gt;(XPathParser.java:125)&#13;
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.&lt;init&gt;(XMLMapperBuilder.java:78)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:339)&#13;
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:113)&#13;
+	... 19 more&#13;
+Caused by: org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 66; Attribute "namespace" must be declared for element type "mapper".&#13;
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.addDTDDefaultAttrsAndValidate(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleStartElement(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)&#13;
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)&#13;
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:257)&#13;
+	... 23 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>
