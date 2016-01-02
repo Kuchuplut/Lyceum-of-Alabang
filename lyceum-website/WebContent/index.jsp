@@ -13,11 +13,11 @@
 		<div class="nav-wrapper white">
 		  <a href="#!" class="brand-logo left"><img src="./pictures/icon.png"> </a>
 		  <ul class="right hide-on-med-and-down">
-		    <li><a href="about.html" class="yellow-text text-darken-2"><i class="material-icons left">info</i>ABOUT</a></li>
+		    <li><a href="about.jsp" class="yellow-text text-darken-2"><i class="material-icons left">info</i>ABOUT</a></li>
 		  </ul>
 		</div>
 	</nav>
-
+ 
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="col s6">
-					<a class="waves-effect waves-light btn light-green darken-3" href="student-sign-up.html"><i class="material-icons right">assignment</i>register</a>
+					<a class="waves-effect waves-light btn light-green darken-3" href="student-sign-up.jsp"><i class="material-icons right">assignment</i>register</a>
 				</div>
 
 				<div class="col s6">
