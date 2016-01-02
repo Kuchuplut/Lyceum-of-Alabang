@@ -13,7 +13,7 @@
 		<div class="nav-wrapper white">
 		  <a href="#!" class="brand-logo left"><img src="./pictures/icon.png"> </a>
 		  <ul class="right hide-on-med-and-down">
-		    <li><a href="about.html" class="yellow-text text-darken-2"><i class="material-icons left">info</i>About</a></li>
+		    <li><a href="about.jsp" class="yellow-text text-darken-2"><i class="material-icons left">info</i>About</a></li>
 		  </ul>
 		</div>
 	</nav>
@@ -28,14 +28,24 @@
 	<br>
 		<div class="container">
 			<div class="row">
-			<h4 class="col s12 yellow-text text-darken-2">Professor Sign Up</h4>
+			<h4 class="col s12 yellow-text text-darken-2">Student Sign Up</h4>
 				<form class="col s12 ">
 					<div class="row">
 
-						<div class="input-field col s12">
-						<input disabled value="2013-03554-MN-0" ="" id="studentNo" type="text" class="validate">
-						<label for="studentNo">Professor Number</label>
+						<div class="input-field col s6">
+						<input id="studentNo" type="text" class="validate">
+						<label for="studentNo">Student Number</label>
 						</div>
+
+						<div class="file-field input-field col s6">
+					      <div class="btn col s6">
+					        <span>Upload Picture</span>
+					        <input type="file" accept="image/*">
+					      </div>
+					      <div class="file-path-wrapper col s6">
+					        <input class="file-path validate" type="text" id="imagePath">
+					      </div>
+						 </div>
 
 						<h6 class="col s12">Name</h6>
 						<div class="input-field col s4">
@@ -142,9 +152,16 @@
 								
 							</p>
 						</div>
-						<div class="col s4 offset-s5">
+
+						<div class="col s6">
+							<a class="btn-large waves-effect waves-light red" href="index.jsp">CANCEL
+							<i class="material-icons right">cancel</i>
+							</a>
+						</div>
+
+						<div class="col s6">
 							<button class="btn-large waves-effect waves-light" type="submit" name="action">SUBMIT
-							<i class="material-icons right">send</i>
+							<i class="material-icons right">done</i>
 							</button>
 						</div>
 						
@@ -176,7 +193,10 @@
 		#pad{
 			height: 1200px;
 		}
-	</style>	
+
+
+	</style>
+
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>

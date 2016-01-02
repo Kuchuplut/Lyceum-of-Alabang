@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="com.lyceum.model.Address"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisConnectionManagerTest"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.ConnectionManager"/>
+<fullyQualifiedTypeName name="junit.framework.TestSuite"/>
+<fullyQualifiedTypeName name="junit.framework.Test"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Person"/>
+<fullyQualifiedTypeName name="com.lyceum.model.Address"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisClient"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.mybatis.mappers.PersonMapper"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.mybatis.mappers.StudentMapper"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisStudentRepository"/>
+<fullyQualifiedTypeName name="com.lyceum.dao.StudentRepository"/>
+<fullyQualifiedTypeName name="com.lyceum.model.Student"/>
+<fullyQualifiedTypeName name="com.lyceum.model.Name"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.lyceum.model.Account"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

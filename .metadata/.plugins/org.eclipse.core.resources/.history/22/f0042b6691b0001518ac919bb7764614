@@ -13,7 +13,7 @@
  	<package name="signUp" extends="struts-default" namespace="/signup">
  	
  		<action name="" class="com.lyceum.actions.SignUpAction">
- 			<result name="success">/student-sign-up.jsp</result>
+ 			<result name="success">/student-sign-up.html</result>
  		</action>
  	
  	</package>
