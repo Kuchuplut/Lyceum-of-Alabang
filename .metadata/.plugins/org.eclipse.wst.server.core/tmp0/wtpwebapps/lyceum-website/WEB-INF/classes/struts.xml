@@ -10,14 +10,21 @@
     <constant name="struts.custom.i18n.resources"
         value="ApplicationResources" />
  
+ 	<package name="main" extends="struts-default" namespace="/">
+		<action name="signup" class="com.lyceum.actions.ChainAction">
+			<result name="success" type="redirect">/signup/</result>
+		</action>
+ 	</package>
+ 
  	<package name="signUp" extends="struts-default" namespace="/signup">
- 	
+ 		
  		<action name="" class="com.lyceum.actions.SignUpInitializeAction">
  			<result name="success">/student-sign-up.jsp</result>
  		</action>
  		
  		<action name="signupSubmit" class="com.lyceum.actions.SignUpAction">
- 			<result name="success">/index.jsp</result>
+ 			<result name="success">/home.jsp</result>
+ 			<result name="input" type="redirect">/student-sign-up.jsp</result>
  		</action>
  	
  	</package>

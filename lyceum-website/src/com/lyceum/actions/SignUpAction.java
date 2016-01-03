@@ -1,6 +1,13 @@
 package com.lyceum.actions;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.lyceum.model.Student;
+import com.lyceum.services.StudentService;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class SignUpAction extends ActionSupport{
@@ -16,6 +23,25 @@ public class SignUpAction extends ActionSupport{
 	private String strSubdivision;
 	private String strCity;
 	private String strProvince;
+	private long birthday;
+	private StudentService studentService;
+	
+	public void setStudentService(StudentService studentService){
+		this.studentService = studentService;
+	}
+	
+	public void setBirthday(String birthday){
+		try {
+			this.birthday = new SimpleDateFormat("yyyy-MM-dd").parse(birthday).getTime();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public Date getBirthday(){
+		return new Date(this.birthday);
+	}
 	
 	public String getStrHouseNo() {
 		return strHouseNo;
@@ -75,7 +101,11 @@ public class SignUpAction extends ActionSupport{
 
 	public String execute(){
 		
-		System.out.println("Practice");
+		getStudent().setBirthday(getBirthday());
+		String strAddress = getStrHouseNo()+" "+getStrStreet()+" "+getStrSubdivision()+" "+getStrBarangay()+", "+getStrCity()+", "+getStrProvince();
+		getStudent().setStrAddress(strAddress.trim());
+		setStudentService((StudentService)ServletActionContext.getServletContext()
+				.getAttribute("studentService"));
 		return "success";
 		
 	}

@@ -1,3 +1,6 @@
 1451666264159	Move 'materialize.css' to 'WebContent'
 1451666270399	Move 'materialize.min.css' to 'WebContent'
 1451666449990	Move 2 resources to 'css'
+1451747121932	Rename package 'com.lyceum.actions.validation'
+1451747777528	Move file
+1451747781935	Delete element

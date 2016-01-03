@@ -45,7 +45,7 @@ public class MybatisStudentRepositoryTest extends TestCase{
 		name.setStrLastName("Layug");
 		student.setName(name);
 		
-		student.setBirthday(new Date());
+		student.setBirthday(new Date("1996/11/08"));
 		student.setStrAddress("Dinalupihan, Bataan");
 		student.setStrContactNo("+639176167102");
 		student.setStrEmail("ken_layug@yahoo.com");

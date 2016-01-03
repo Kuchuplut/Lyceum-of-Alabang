@@ -1,0 +1,9 @@
+package com.lyceum.actions;
+
+public class ChainAction {
+
+	public String execute(){
+		return "success";
+	}
+	
+}

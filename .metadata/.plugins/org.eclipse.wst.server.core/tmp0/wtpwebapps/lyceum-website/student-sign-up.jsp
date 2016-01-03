@@ -67,7 +67,7 @@
 						<h6 class="col s6">Gender</h6>
 
 						<div class="col s6">
-							<input type="date" class="datepicker" id="bday">
+							<input type="date" class="datepicker" id="bday" name="birthday">
 						</div>
 
 						<div class="col s6">

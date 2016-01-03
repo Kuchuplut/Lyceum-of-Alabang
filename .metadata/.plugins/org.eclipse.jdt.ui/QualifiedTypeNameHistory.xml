@@ -17,7 +17,9 @@
 <fullyQualifiedTypeName name="com.lyceum.dao.StudentRepository"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Student"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Name"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Account"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.lyceum.services.StudentService"/>
 </qualifiedTypeNameHistroy>

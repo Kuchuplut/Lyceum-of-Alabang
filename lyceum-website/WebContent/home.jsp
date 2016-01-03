@@ -4,7 +4,7 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/css/materialize.min.css"  media="screen,projection"/>
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,7 +18,7 @@
 	</ul>
 	<nav>
 		<div class="nav-wrapper white">
-		  <a href="#!" class="brand-logo left"><img src="./pictures/icon.png"> </a>
+		  <a href="#!" class="brand-logo left"><img src="<%=request.getContextPath()%>/pictures/icon.png"> </a>
 		  <ul class="right hide-on-med-and-down">
 		    <li class="yellow darken-2"><a href="home.jsp" class="white-text text-darken-2"><i class="material-icons">list</i></a></li>
 		    <li><a href="grades.jsp" class="yellow-text text-darken-2"><i class="material-icons">grade</i></a></li>
@@ -26,7 +26,7 @@
 		    <li><a href="message.jsp" class="yellow-text text-darken-2"><i class="material-icons">email</i></a></li>
 		    <li>
 			    <a href="about.jsp" class="yellow-text text-darken-2 small dropdown-button" data-activates="dropdown1">
-			    <img src="./pictures/pictureSample.jpg" class="circle" alt="picture" height="42" width="42" align="middle"></a>
+			    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle" alt="picture" height="42" width="42" align="middle"></a>
 		    </li>
 		  </ul>
 		</div>
@@ -61,7 +61,7 @@
 	<style type="text/css">
 	 body {
 	 	background-size: cover;
-	    background-image:url('./pictures/Login2.jpg');
+	    background-image:url('<%=request.getContextPath()%>/pictures/Login2.jpg');
 	    background-repeat: no-repeat;
 	    background-attachment: fixed;
 	}
@@ -102,7 +102,7 @@
 	</style>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="<%=request.getContextPath()%>/js/materialize.min.js"></script>
 </body>
 <footer class="page-footer yellow darken-2">
           <div class="container">
