@@ -33,7 +33,7 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 			studentMapper.insertAccount(student);
 			studentMapper.insertStudent(student);
 			session.commit();
-			return "successInSaving";
+			return "success";
 			
 		}catch(Exception e){
 			e.printStackTrace();

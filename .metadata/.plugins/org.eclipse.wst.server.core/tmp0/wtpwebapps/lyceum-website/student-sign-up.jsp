@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -166,6 +167,7 @@
 						</div>
 						
 					</div>
+					<s:token />
 				</form>
 			</div>
 		</div>
