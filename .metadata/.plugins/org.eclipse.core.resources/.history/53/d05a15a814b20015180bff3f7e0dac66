@@ -1,0 +1,8 @@
+package com.lyceum.services;
+
+public interface StudentService {
+
+	public String getStudentCode();
+	public String registerStudent(Student student);
+	
+}

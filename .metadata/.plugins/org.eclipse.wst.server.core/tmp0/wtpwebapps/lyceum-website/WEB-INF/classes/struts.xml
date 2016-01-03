@@ -20,10 +20,13 @@
  		
  		<action name="" class="com.lyceum.actions.SignUpInitializeAction">
  			<result name="success">/student-sign-up.jsp</result>
+ 			<result name="errorInDatabase">/error-database.jsp</result>
  		</action>
  		
  		<action name="signupSubmit" class="com.lyceum.actions.SignUpAction">
- 			<result name="success">/home.jsp</result>
+ 			<result name="successInSaving">/success-sign-up.jsp</result>
+ 			<result name="errorInValidation">/student-sign-up.jsp</result>
+ 			<result name="errorInSaving">/error-database.jsp</result>
  			<result name="input" type="redirect">/student-sign-up.jsp</result>
  		</action>
  	

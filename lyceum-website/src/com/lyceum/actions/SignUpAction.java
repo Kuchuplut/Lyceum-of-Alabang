@@ -25,7 +25,7 @@ public class SignUpAction extends ActionSupport{
 	private String strProvince;
 	private long birthday;
 	private StudentService studentService;
-	
+
 	public void setStudentService(StudentService studentService){
 		this.studentService = studentService;
 	}
@@ -106,7 +106,7 @@ public class SignUpAction extends ActionSupport{
 		getStudent().setStrAddress(strAddress.trim());
 		setStudentService((StudentService)ServletActionContext.getServletContext()
 				.getAttribute("studentService"));
-		return "success";
+		return studentService.registerStudent(student);
 		
 	}
 

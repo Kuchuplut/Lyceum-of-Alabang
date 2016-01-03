@@ -1,0 +1,8 @@
+package com.lyceum.business;
+
+public interface StudentBusiness {
+
+	public String getStudentCode();
+	public String registerStudent(Student student);
+	
+}

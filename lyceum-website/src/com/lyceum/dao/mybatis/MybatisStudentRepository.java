@@ -76,7 +76,7 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 		}finally{
 			session.close();
 		}
-		return null;
+		return "errorInDatabase";
 	}
 
 }

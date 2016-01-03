@@ -72,10 +72,10 @@
 
 						<div class="col s6">
 							<p>
-								<input name="group1" type="radio" id="male" />
+								<input name="student.strGender" type="radio" id="male" value="Male"/>
 								<label for="male">Male</label>
 							
-								<input name="group1" type="radio" id="female" />
+								<input name="student.strGender" type="radio" id="female" value="Female"/>
 								<label for="female">Female</label>
 							</p>
 						</div>
