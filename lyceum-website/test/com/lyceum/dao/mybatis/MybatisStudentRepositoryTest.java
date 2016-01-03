@@ -1,7 +1,5 @@
 package com.lyceum.dao.mybatis;
 
-import java.util.Date;
-
 import com.lyceum.dao.ConnectionManager;
 import com.lyceum.dao.StudentRepository;
 import com.lyceum.model.Account;
@@ -35,7 +33,7 @@ public class MybatisStudentRepositoryTest extends TestCase{
 		connManager = null;
 	}
 	
-	public void testAddStudent(){
+	public void testAddStudent() throws Exception{
 		
 		student = new Student();
 		
@@ -45,7 +43,7 @@ public class MybatisStudentRepositoryTest extends TestCase{
 		name.setStrLastName("Layug");
 		student.setName(name);
 		
-		student.setBirthday(new Date("1996/11/08"));
+		student.setBirthday("1996-11-08");
 		student.setStrAddress("Dinalupihan, Bataan");
 		student.setStrContactNo("+639176167102");
 		student.setStrEmail("ken_layug@yahoo.com");
@@ -62,7 +60,7 @@ public class MybatisStudentRepositoryTest extends TestCase{
 	}
 	
 	public void testGetAllStudent(){
-		
+
 		assertNotNull(studentRepository.getAllStudent());
 		
 	}

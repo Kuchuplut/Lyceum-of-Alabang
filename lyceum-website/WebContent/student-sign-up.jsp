@@ -68,7 +68,7 @@
 						<h6 class="col s6">Gender</h6>
 
 						<div class="col s6">
-							<input type="date" class="datepicker" id="bday" name="birthday" required>
+							<input type="date" class="datepicker" id="bday" name="student.birthday" required>
 						</div>
 
 						<script type="text/javascript">
@@ -91,33 +91,33 @@
 						<h6 class="col s12">Address</h6>
 
 						<div class="input-field col s3">
-						<input id="houseNO" type="text" class="validate" name="strHouseNo" required>
+						<input id="houseNO" type="text" class="validate" name="student.address.strHouseNo" required>
 						<label for="houseNO">Number</label>
 						</div>
 
 						<div class="input-field col s3">
-						<input id="street" type="text" class="validate" name="strStreet" required>
+						<input id="street" type="text" class="validate" name="student.address.strStreet" required>
 						<label for="street">Street</label>
 						</div>
 
 						<div class="input-field col s3">
-						<input id="brgy" type="text" class="validate" name="strBarangay" required>
+						<input id="brgy" type="text" class="validate" name="student.address.strBarangay" required>
 						<label for="brgy">Barangay</label>
 						</div>
 
 						<div class="input-field col s3">
-						<input placeholder="(optional)"id="subd" type="text" class="validate" name="strSubdivision">
+						<input placeholder="(optional)"id="subd" type="text" class="validate" name="student.address.strSubdivision">
 						<label for="subd">Subdivision</label>
 						</div>
 
 
 						<div class="input-field col s6">
-						<input id="city" type="text" class="validate" name="strCity" required>
+						<input id="city" type="text" class="validate" name="student.address.strCity" required>
 						<label for="city">City</label>
 						</div>
 
 						<div class="input-field col s6">
-						<input id="province" type="text" class="validate" name="strProvince" required>
+						<input id="province" type="text" class="validate" name="student.address.strProvince" required>
 						<label for="province">Province</label>
 						</div>
 

@@ -8,24 +8,24 @@
 	<!-- RESULTMAPS -->
 	
 		<resultMap id="NameResultMap" type="Name">
-			<result property="strFirstName" column="n.strFirstName"/>
-			<result property="strMiddleName" column="n.strMiddleName"/>
-			<result property="strLastName" column="n.strLastName"/>
+			<result property="strFirstName" column="strFirstName"/>
+			<result property="strMiddleName" column="strMiddleName"/>
+			<result property="strLastName" column="strLastName"/>
 		</resultMap>
 		
 		<resultMap id="AccountResultMap" type="Account">
-			<result property="strUsername" column="a.strUsername"/>
-			<result property="strAccountType" column="at.strAccountDesc"/>
+			<result property="strUsername" column="strUsername"/>
+			<result property="strAccountType" column="strAccountDesc"/>
 		</resultMap>
 	
 		<resultMap id="StudentResultMap" type="Student">
-			<result property="strStudentCode" column="s.strStudentCode"/>
-			<result property="strAddress" column="a.strAddressText"/>
-			<result property="strGender" column="g.strGenderDesc"/>
-			<result property="strEmail" column="e.strEmailDesc"/>
-			<result property="strContactNo" column="c.strContactNoDesc"/>
-			<result property="birthday" column="p.datBirthday"/>
-			<association property="name" column="n.skName" javaType="Name" resultMap="NameResultMap"/>
+			<result property="strStudentCode" column="strStudentCode" />
+			<result property="strAddress" column="strAddressText"/>
+			<result property="strGender" column="strGenderDesc"/>
+			<result property="strEmail" column="strEmailDesc"/>
+			<result property="strContactNo" column="strContactNoDesc"/>
+			<result property="birthday" column="datBirthday"/>
+			<association property="name" resultMap="NameResultMap" column="n.skName" javaType="Name"/>
 		</resultMap>
 		
 		<resultMap id="StudentCodeResultMap" type="java.lang.String">

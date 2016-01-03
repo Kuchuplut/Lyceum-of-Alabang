@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	ERROR IN VALIDATION.
+	ERROR! DOUBLE CLICK, BACK BUTTON, REFRESH BUTTON
 </body>
 </html>

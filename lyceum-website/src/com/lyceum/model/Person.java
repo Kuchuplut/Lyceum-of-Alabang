@@ -9,11 +9,18 @@ public class Person {
 	private int skPerson;
 	private Name name;
 	private String strAddress;
+	private Address address;
 	private long birthday;
 	private String strGender;
 	private String strEmail;
 	private String strContactNo;
 	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	public int getSkPerson() {
 		return skPerson;
 	}
@@ -41,8 +48,10 @@ public class Person {
 	public Date getBirthday() {
 		return new Date(birthday);
 	}
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday.getTime();
+	public void setBirthday(String birthday) throws Exception {
+			System.out.println("HERE");
+			this.birthday = new SimpleDateFormat("yyyy-MM-dd").parse(birthday).getTime();
+			System.out.println("Birthday -- "+getBirthday());
 	}
 	public String getStrEmail() {
 		return strEmail;
