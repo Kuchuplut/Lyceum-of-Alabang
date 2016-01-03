@@ -50,7 +50,7 @@
 
 						<h6 class="col s12">Name</h6>
 						<div class="input-field col s4">
-						<input id="firstName" type="text" class="validate" name="student.name.strFirstName">
+						<input id="firstName" type="text" class="validate" name="student.name.strFirstName" required>
 						<label for="firstName">First Name</label>
 						</div>
 
@@ -60,7 +60,7 @@
 						</div>
 
 						<div class="input-field col s4">
-						<input id="lastName" type="text" class="validate" name="student.name.strLastName">
+						<input id="lastName" type="text" class="validate" name="student.name.strLastName" required>
 						<label for="lastName">Last Name</label>
 						</div>
 
@@ -68,8 +68,15 @@
 						<h6 class="col s6">Gender</h6>
 
 						<div class="col s6">
-							<input type="date" class="datepicker" id="bday" name="birthday">
+							<input type="date" class="datepicker" id="bday" name="birthday" required>
 						</div>
+
+						<script type="text/javascript">
+						$('.datepicker').pickadate({
+						    selectMonths: true, // Creates a dropdown to control month
+						    selectYears: 15 // Creates a dropdown of 15 years to control year
+						  });fa
+						</script>
 
 						<div class="col s6">
 							<p>
@@ -84,17 +91,17 @@
 						<h6 class="col s12">Address</h6>
 
 						<div class="input-field col s3">
-						<input id="houseNO" type="text" class="validate" name="strHouseNo">
+						<input id="houseNO" type="text" class="validate" name="strHouseNo" required>
 						<label for="houseNO">Number</label>
 						</div>
 
 						<div class="input-field col s3">
-						<input id="street" type="text" class="validate" name="strStreet">
+						<input id="street" type="text" class="validate" name="strStreet" required>
 						<label for="street">Street</label>
 						</div>
 
 						<div class="input-field col s3">
-						<input id="brgy" type="text" class="validate" name="strBarangay">
+						<input id="brgy" type="text" class="validate" name="strBarangay" required>
 						<label for="brgy">Barangay</label>
 						</div>
 
@@ -105,41 +112,41 @@
 
 
 						<div class="input-field col s6">
-						<input id="city" type="text" class="validate" name="strCity">
+						<input id="city" type="text" class="validate" name="strCity" required>
 						<label for="city">City</label>
 						</div>
 
 						<div class="input-field col s6">
-						<input id="province" type="text" class="validate" name="strProvince">
+						<input id="province" type="text" class="validate" name="strProvince" required>
 						<label for="province">Province</label>
 						</div>
 
 						<h6 class="col s12">Contact Information</h6>
 
 						<div class="input-field col s6">
-						<input id="email" type="email" class="validate" name="student.strEmail">
+						<input id="email" type="email" class="validate" name="student.strEmail" required>
 						<label for="email">E-mail Address</label>
 						</div>
 
 						<div class="input-field col s6">
-						<input id="contanctNo" type="text" class="validate" name="student.strContactNo">
+						<input id="contanctNo" type="text" class="validate" name="student.strContactNo"required>
 						<label for="contanctNo">Contact No.</label>
 						</div>
 
 						<h6 class="col s12">Account Information</h6>
 
 						<div class="input-field col s4">
-						<input id="username" type="text" class="validate" name="student.account.strUsername">
+						<input id="username" type="text" class="validate" name="student.account.strUsername" required>
 						<label for="username">Username</label>
 						</div>
 
 						<div class="input-field col s4">
-						<input id="password" type="password" class="validate" name="student.account.strPassword">
+						<input id="password" type="password" class="validate" name="student.account.strPassword" required>
 						<label for="password">Password</label>
 						</div>
 
 						<div class="input-field col s4">
-						<input id="password" type="password" class="validate">
+						<input id="password" type="password" class="validate" required>
 						<label for="password">Re-type Password</label>
 						</div>
 				
