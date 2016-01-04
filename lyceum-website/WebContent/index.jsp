@@ -4,14 +4,14 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/css/materialize.min.css"  media="screen,projection"/>
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<nav>
 		<div class="nav-wrapper white">
-		  <a href="#!" class="brand-logo left"><img src="./pictures/icon.png"> </a>
+		  <a href="#!" class="brand-logo left"><img src="<%=request.getContextPath()%>/pictures/icon.png"> </a>
 		  <ul class="right hide-on-med-and-down">
 		    <li><a href="about.jsp" class="yellow-text text-darken-2"><i class="material-icons left">info</i>ABOUT</a></li>
 		  </ul>
@@ -22,12 +22,12 @@
 
 <body>
 <p id="prelude">
-	<h1 class="white-text light">Physical Education</h1>
-	<h5 class="grey-text text-lighten-3 light">Learn through your computer!</h5>
+	<h1 class="white-text light" style="text-shadow: 2px 2px 8px #000000;">Physical Education</h1>
+	<h5 class="grey-text text-lighten-3 light" style="text-shadow: 2px 2px 4px #000000;">Learn through your computer!</h5>
 	<br><br><br><br><br><br><br><br><br><br><br>
 </p>
 
-	<div class="row white" id="LogInBg">
+	<div class="row white z-depth-4" id="LogInBg">
 		<h4 class="col s12 yellow-text text-darken-2"> Log In</h4>
 		<form class="col s12">
 			<div class="row">
@@ -96,19 +96,19 @@
 	<style type="text/css">
 	 body {
 	 	background-size: cover;
-	    background-image:url('./pictures/Login2.jpg');
+	    background-image:url('<%=request.getContextPath()%>/pictures/Login2.jpg');
 	    background-repeat: no-repeat;
 	    background-attachment: fixed;
 	}
 
 
 	#LogInBg{
+		border-radius: 10px;
 		width: 600px;
 		height: 300px;
 		position: absolute;
 		right: 0;
 		top: 20%;
-		box-shadow: 10px 10px 40px black;
 	}
 
 	#prelude{

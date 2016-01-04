@@ -43,16 +43,168 @@
 <body>
 
 	<div class="flex-container">
-		<div id="infoTab" class="flexItemInfoTab white">
-			<h2 class="yellow-text text-darken-2">Info Tab</h2>
+		<div id="infoTab" class="flexItemInfoTab lime darken-4 z-depth-3">
+			<div class="col s12 row">
+				<p>
+					<img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
+				</p>
+				
+				<h5 class="col s12 white-text">Juan D. Makakamot</h5>
+				<h6 class="col s12 white-text">Student No: 2013-03554-MN-0</h6>
+				<h6 class="col s12 white-text"><strong>About</strong></h6>
+				<p class="col s12 white-text">
+					Wala lang, nagiisip pa ko ng ilalagay dito blah blash kahit ano basta
+				</p>
+			</div>
 		</div>
 
-		<div id="mainTab" class="flexItemMainTab white">
-			<h2 class="yellow-text text-darken-2">News Feed</h2>
+		<div id="mainTab" class="flexItemMainTab white z-depth-3">
+			<div class="col s12" style="margin: 10px;">
+			<h2 class="yellow-text text-darken-2 col s12">CORK BOARD</h2>
+				<ul class="collection">
+				   <li class="collection-item avatar">
+				     <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" alt="" class="circle" width="42" height="42">
+				     <span class="title"><strong>Juan D. Makakamot</strong></span>
+				     <p>Ang kati kati na! Di ko na kaya! Urgh!<br>
+				        11:11pm, Jan 2, 2016
+				     </p>
+				     <div class="fixed-action-btn horizontal secondary-content">
+				         <a class="btn-floating btn-large red">
+				           <i class="material-icons large">mode_edit</i>
+				         </a>
+				         <ul>
+				           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				         </ul>
+				      </div>
+				   </li>
+				   <li class="collection-item avatar">
+				     <i class="material-icons circle">account_circle</i>
+				     <span class="title"><strong>Mariang Palad</strong></span>
+				     <p>Eto na oh <br>
+				        10:16pm, Jan 1, 2016
+				     </p>
+				     <img src="<%=request.getContextPath()%>/pictures/background1.jpg" height="50%" width="50%">
+				      <div class="fixed-action-btn horizontal secondary-content">
+				         <a class="btn-floating btn-large red">
+				           <i class="large material-icons">mode_edit</i>
+				         </a>
+				         <ul>
+				           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				         </ul>
+				      </div>
+				     
+				   </li>
+				   <li class="collection-item avatar">
+				     <i class="material-icons circle">account_circle</i>
+				     <span class="title">Title</span>
+				     <p>First Line <br>
+				        Second Line
+				     </p>
+				      <div class="fixed-action-btn horizontal secondary-content">
+				         <a class="btn-floating btn-large red">
+				           <i class="large material-icons">mode_edit</i>
+				         </a>
+				         <ul>
+				           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				         </ul>
+				      </div>
+				    
+				   </li>
+				   <li class="collection-item avatar">
+				     <i class="material-icons circle">account_circle</i>
+				     <span class="title">Title</span>
+				     <p>First Line <br>
+				        Second Line
+				     </p>
+				      <div class="fixed-action-btn horizontal secondary-content">
+				         <a class="btn-floating btn-large red">
+				           <i class="large material-icons">mode_edit</i>
+				         </a>
+				         <ul>
+				           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				         </ul>
+				      </div>
+				 
+				   </li>
+				   <li class="collection-item avatar">
+				     <i class="material-icons circle">account_circle</i>
+				     <span class="title">Title</span>
+				     <p>First Line <br>
+				        Second Line
+				     </p>
+				      <div class="fixed-action-btn horizontal secondary-content">
+				         <a class="btn-floating btn-large red">
+				           <i class="large material-icons">mode_edit</i>
+				         </a>
+				         <ul>
+				           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				         </ul>
+				      </div>
+				     
+				   </li>
+				   <li class="collection-item avatar">
+				     <i class="material-icons circle">account_circle</i>
+				     <span class="title">Title</span>
+				     <p>First Line <br>
+				        Second Line
+				     </p>
+				      <div class="fixed-action-btn horizontal secondary-content">
+				         <a class="btn-floating btn-large red">
+				           <i class="large material-icons">mode_edit</i>
+				         </a>
+				         <ul>
+				           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				         </ul>
+				      </div>
+				     
+				   </li>
+				   <li class="collection-item avatar">
+				     <i class="material-icons circle">account_circle</i>
+				     <span class="title">Title</span>
+				     <p>First Line <br>
+				        Second Line
+				     </p>
+				      <div class="fixed-action-btn horizontal secondary-content">
+				         <a class="btn-floating btn-large red">
+				           <i class="large material-icons">mode_edit</i>
+				         </a>
+				         <ul>
+				           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+				           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+				           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+				           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+				         </ul>
+				      </div>
+				     
+				   </li>
+				 </ul>
+			</div>
 		</div>
 
-		<div id="sideTab" class="flexItemSideTab white">
-			<h2 class="yellow-text text-darken-2">Side Tab</h2>
+		<div id="sideTab" class="flexItemSideTab white z-depth-3 row">
+			<h3 class="yellow-text text-darken-2 col s12">Tutorials</h3>
+			<a class="col s12" href="#">
+				<i class="material-icons large center-align yellow-text text-darken-2 " style="display: block; margin-left: auto; margin-rght: auto;">live_tv</i>
+			</a>
+			<h5 class="col s12 ">Watch Video Tuorials Online!</h5>
 		</div>
 	</div>
 
@@ -75,7 +227,6 @@
 
 	.flexItemInfoTab{
 		border-radius: 10px;
-	    background-color: white;
 	    width: 20%;
 	    height: 900px;
 	    margin: 10px;
