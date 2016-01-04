@@ -26,7 +26,11 @@ public class SignUpInitializeAction extends ActionSupport{
 		
 		StudentService studentService = (StudentService)ServletActionContext.getServletContext()
 				.getAttribute("studentService");
-		setStrStudentCode(studentService.getStudentCode());
+		String strStudentCode = studentService.getStudentCode();
+		if (strStudentCode.equals("errorInDatabase")){
+			return strStudentCode;
+		}
+		setStrStudentCode(strStudentCode);
 		return "success";
 		
 	}
