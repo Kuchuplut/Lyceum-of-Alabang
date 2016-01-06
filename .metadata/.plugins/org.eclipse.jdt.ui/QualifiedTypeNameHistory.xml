@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisConnectionManagerTest"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.ConnectionManager"/>
 <fullyQualifiedTypeName name="junit.framework.TestSuite"/>
@@ -15,11 +14,15 @@
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisStudentRepository"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.StudentRepository"/>
-<fullyQualifiedTypeName name="com.lyceum.model.Student"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Name"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Account"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.lyceum.services.StudentService"/>
+<fullyQualifiedTypeName name="com.lyceum.model.Student"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.interceptor.AbstractInterceptor"/>
+<fullyQualifiedTypeName name="com.sun.javafx.collections.MappingChange.Map"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="MybatisConnectionManagerTest" project="lyceum-website" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.lyceum.dao.mybatis.MybatisConnectionManagerTest" time="0.506">
-    <testcase name="testEstablishConnection" classname="com.lyceum.dao.mybatis.MybatisConnectionManagerTest" time="0.506"/>
-  </testsuite>
-</testrun>

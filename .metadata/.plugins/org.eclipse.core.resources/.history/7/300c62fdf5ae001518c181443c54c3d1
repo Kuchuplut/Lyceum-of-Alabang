@@ -1,5 +1,0 @@
-package com.lyceum.dao.mybatis;
-
-public class MybatisStudentRepository extends MybatisClient implements StudentRepository{
-
-}
