@@ -31,7 +31,6 @@
  		</action>
  		
  		<action name="signupSubmit" class="com.lyceum.actions.signup.SignUpAction">
- 			<interceptor-ref name="tokenSession"/>
  			<result name="success" type="redirect">/home/</result>
  			<result name="errorInValidation">/student-sign-up.jsp</result>
  			<result name="errorInSaving">/error-database.jsp</result>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StudentServiceImplTest" project="lyceum-website" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.lyceum.service.impl.StudentServiceImplTest" time="1.686">
+    <testcase name="getStudentCodeTest" classname="com.lyceum.service.impl.StudentServiceImplTest" time="0.764"/>
+    <testcase name="registerStudentTest" classname="com.lyceum.service.impl.StudentServiceImplTest" time="0.922"/>
+  </testsuite>
+</testrun>

@@ -1,8 +1,5 @@
 package com.lyceum.actions.signup;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Map;
 
 import org.apache.struts2.ServletActionContext;
@@ -10,9 +7,10 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.lyceum.model.Student;
 import com.lyceum.services.StudentService;
+import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class SignUpAction extends ActionSupport implements SessionAware{
+public class SignUpAction extends ActionSupport implements SessionAware, Action{
 
 	/**
 	 * 
@@ -38,7 +36,8 @@ public class SignUpAction extends ActionSupport implements SessionAware{
 		
 		setStudentService((StudentService)ServletActionContext.getServletContext()
 				.getAttribute("studentService"));
-		String strStatus = studentService.registerStudent(student);
+		
+		String strStatus = studentService.registerStudent(getStudent());
 		
 		if (strStatus.equals("success")){
 			sessionMap.put("strUsername", student.getAccount().getStrUsername());

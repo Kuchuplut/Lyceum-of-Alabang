@@ -1,7 +1,5 @@
 package com.lyceum.business.impl;
 
-import java.util.Date;
-
 import com.lyceum.business.StudentBusiness;
 import com.lyceum.conversion.SmartCounter;
 import com.lyceum.dao.StudentRepository;
@@ -42,7 +40,7 @@ public class StudentBusinessImpl implements StudentBusiness{
 			if (student.getBirthday() == null){
 				throw new IllegalArgumentException();
 			}
-			if (student.getStrAddress() == null || student.getStrAddress().equals("")){
+			if (student.getAddress().getFullAddress() == null || student.getAddress().getFullAddress().equals("")){
 				throw new IllegalArgumentException();
 			}
 			if (student.getStrContactNo() == null || student.getStrContactNo().equals("")){

@@ -52,7 +52,7 @@
 		
 		<insert id="insertAddress">
 			INSERT INTO tblAddress (strAddressText, skPersonFK)
-			VALUES  (#{person.address.fullAddress},
+			VALUES  (#{address.fullAddress},
 					 #{skPerson}
 			)
 		</insert>
