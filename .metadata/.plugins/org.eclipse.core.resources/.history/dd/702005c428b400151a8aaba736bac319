@@ -1,0 +1,5 @@
+package com.lyceum.dao;
+
+public interface AccountRepository {
+
+}

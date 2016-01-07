@@ -1,9 +1,0 @@
-package com.lyceum.dao.mybatis.mappers;
-
-import com.lyceum.model.Person;
-
-public interface ContactInfoMapper {
-
-	public void insertAddress(Person person);
-	
-}

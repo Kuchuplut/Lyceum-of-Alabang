@@ -1,0 +1,7 @@
+package com.lyceum.services;
+
+public interface AccountService {
+
+	public String loginAccount(Account account);
+	
+}

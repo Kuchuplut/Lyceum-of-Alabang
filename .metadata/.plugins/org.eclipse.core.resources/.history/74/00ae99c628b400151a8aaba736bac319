@@ -1,0 +1,7 @@
+package com.lyceum.dao;
+
+public interface AccountRepository {
+	
+	public String loginAccount(Account account);
+
+}

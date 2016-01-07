@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper>
+	
+	<!-- RESULTMAP -->
+	
+		<resultMap type="countAccountResultMap" id="java.lang.Integer">
+			<result property="intAccountExist" column="COUNT(strUsername)"/>
+		</resultMap>
+		
+		<resultMap type="accountTypeResultMap" id="java.lang.String">
+			<result property="strAccountType" column="strAccountType"/>
+		</resultMap>
+	
+	<!-- END RESULTMAP -->
+		
+		
+	<!-- SELECT QUERIES -->
+	
+		<select id="accountExisting" resultMap="countAccountResultMap">
+		
+			SELECT COUNT(strUsername) FROM tblAccount WHERE strUsername = #{strUsername} 
+		
+		</select>
+		
+		<select id="checkPassword" resultMap="countAccountResultMap">
+		
+			SELECT COUNT(strUsername) FROM tblAccount
+			WHERE strUsername = #{strUsername}
+			AND strPassword = MD5(#{strPassword})
+		
+		</select>
+		
+		<select id="getAccountType" resultMap="accountTypeResultMap">
+		
+			SELECT at.strAccountType FROM tblAccount a
+			INNER JOIN tblAccountType at ON a.skAccountTypeFK = at.skAccountType
+			WHERE strUsername = #{strUsername}
+		
+		</select>
+	
+	<!-- END SELECT QUERIES -->
+	
+	</mapper>

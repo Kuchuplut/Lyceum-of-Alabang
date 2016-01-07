@@ -29,15 +29,15 @@
 
 	<div class="row white z-depth-4" id="LogInBg">
 		<h4 class="col s12 yellow-text text-darken-2"> Log In</h4>
-		<form class="col s12">
+		<form class="col s12" action="login/loginSubmit" method="post">
 			<div class="row">
 				<div class="input-field col s12">
-					<input id="first_name" type="text" class="validate">
+					<input id="first_name" type="text" class="validate" name="account.strUsername">
 					<label for="first_name">Username</label>
 				</div>
 
 				<div class="input-field col s12">
-					<input id="last_name" type="password" class="validate">
+					<input id="last_name" type="password" class="validate" name="account.strPassword">
 					<label for="last_name">Password</label>
 				</div>
 
@@ -120,7 +120,7 @@
 	</style>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="<%=request.getContextPath()%>/js/materialize.min.js"></script>
 </body>
 <footer class="page-footer yellow darken-2">
           <div class="container">

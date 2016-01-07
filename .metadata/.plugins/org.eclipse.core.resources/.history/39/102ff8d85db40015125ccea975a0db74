@@ -1,0 +1,26 @@
+package com.lyceum.service.impl;
+
+import com.lyceum.services.AccountService;
+
+import junit.framework.TestCase;
+
+public class AccountServiceImplTest extends TestCase{
+
+	private AccountService accountService;
+	
+	public void setAccountService(AccountService accountService){
+		this.accountService = accountService;
+	}
+	
+	public AccountServiceImplTest(String testName){
+		super(testName);
+	}
+	
+	@Override
+	public void setUp(){
+		
+		ConnectionManager connectionManager = new MybatisConnectionManager();
+		
+	}
+	
+}
