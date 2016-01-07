@@ -1,0 +1,5 @@
+package com.lyceum.actions.home.student;
+
+public class StudentInitialization {
+
+}

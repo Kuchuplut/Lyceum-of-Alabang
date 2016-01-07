@@ -1,0 +1,39 @@
+package com.lyceum.actions.home.student;
+
+import java.util.Map;
+
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.lyceum.model.Student;
+import com.lyceum.services.AccountService;
+import com.lyceum.services.StudentService;
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HomeInitializationAction extends ActionSupport implements SessionAware, Action{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Map<String,Object> sessionMap;
+	
+	public String execute(){
+		
+		System.out.println("HERE AT HOME STUDENT INITIALIZATION");
+		String strUsername = (String) sessionMap.get("strUsername");
+		System.out.println(strUsername);
+		String strAccountType = (String) sessionMap.get("strAccountType");
+		System.out.println(strAccountType);
+		return strAccountType;
+		
+	}
+
+	@Override
+	public void setSession(Map<String, Object> sessionMap) {
+		// TODO Auto-generated method stub
+		this.sessionMap = sessionMap;
+	}
+	
+}

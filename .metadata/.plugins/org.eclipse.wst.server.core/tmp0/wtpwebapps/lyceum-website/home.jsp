@@ -12,7 +12,7 @@
 	<ul id="dropdown1" class="dropdown-content">
 		<li><a href="#!">Settings</a></li>
 		<li class="divider"></li>
-		<li><a href="#!">Log out</a></li>
+		<li><a href="<%=request.getContextPath()%>/logout">Log out</a></li>
 		<li class="divider"></li>
 		<li><a href="#!">Anything</a></li>
 	</ul>
@@ -190,8 +190,8 @@
 			    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
 			  </p>
 			  
-			  <h5 class="col s12 yellow-text text-darken-4 light">Juan D. Makakamot</h5>
-			  <h6 class="col s12 light">Student No: 2013-03554-MN-0</h6>
+			  <h5 class="col s12 yellow-text text-darken-4 light">${student.name}</h5>
+			  <h6 class="col s12 light">Student No: ${student.strStudentCode}</h6>
 			  <h6 class="col s12 light"><strong>About</strong></h6>
 			  <p class="col s12 light">
 			    Wala lang, nagiisip pa ko ng ilalagay dito blah blash kahit ano basta

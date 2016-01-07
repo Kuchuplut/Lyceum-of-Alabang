@@ -2,3 +2,7 @@
 1451831826511	Rename type 'HomeInitialization'
 1451833414026	Delete element
 1451847185376	Rename resource 'error-validation.jsp'
+1452136597275	Move compilation unit
+1452138186626	Rename resource 'student-struts.xml'
+1452140176346	Move compilation unit
+1452142421815	Rename type 'AccountTypeInterceptor'

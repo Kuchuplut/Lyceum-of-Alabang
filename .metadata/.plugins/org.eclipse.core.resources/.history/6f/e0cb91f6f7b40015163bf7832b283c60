@@ -1,0 +1,10 @@
+package com.lyceum.actions.home.student;
+
+public class StudentInitialization implement Action{
+
+	public String execute(){
+		String referrer = request.getHeader("referer"); 
+		return "success";
+	}
+	
+}

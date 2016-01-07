@@ -63,6 +63,32 @@
 			SELECT strStudentCode FROM tblStudent ORDER BY strStudentCode DESC LIMIT 1
 		
 		</select>
+		
+		<select id="getStudentWithUsername" resultMap="StudentResultMap">
+		
+			SELECT 
+				s.strStudentCode,
+				n.strFirstName,
+				n.strMiddleName,
+				n.strLastName,
+				g.strGenderDesc,
+				p.datBirthday,
+				a.strAddressText,
+				c.strContactNoDesc,
+				e.strEmailDesc
+			FROM tblStudent s
+			INNER JOIN tblPerson p ON s.skPersonFK = p.skPerson
+			INNER JOIN tblName n ON p.skNameFK = n.skName
+			INNER JOIN tblGender g ON p.strGenderCodeFK = g.strGenderCode
+			INNER JOIN tblAddress a ON a.skPersonFK = p.skPerson
+			INNER JOIN tblContactNo c ON c.skPersonFK = p.skPerson
+			INNER JOIN tblEmail e ON e.skPersonFK = p.skPerson
+			INNER JOIN tblAccount acc ON acc.skAccount = s.skAccountFK
+			<if test="strUsername != null">
+				WHERE acc.strUsername = #{strUsername}
+			</if>
+		
+		</select>
 	
 	<!-- END SELECT QUERIES -->
 	

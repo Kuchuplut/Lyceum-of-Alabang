@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +30,8 @@
 
 	<div class="row white z-depth-4" id="LogInBg">
 		<h4 class="col s12 yellow-text text-darken-2"> Log In</h4>
-		<form class="col s12" action="login/loginSubmit" method="post">
+		<form class="col s12" action="loginSubmit" method="post">
+			<s:token />
 			<div class="row">
 				<div class="input-field col s12">
 					<input id="first_name" type="text" class="validate" name="account.strUsername">

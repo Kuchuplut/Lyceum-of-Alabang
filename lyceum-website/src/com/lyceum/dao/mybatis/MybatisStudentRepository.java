@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import com.lyceum.dao.StudentRepository;
 import com.lyceum.dao.mybatis.mappers.PersonMapper;
 import com.lyceum.dao.mybatis.mappers.StudentMapper;
+import com.lyceum.model.Account;
 import com.lyceum.model.Student;
 
 public class MybatisStudentRepository extends MybatisClient implements StudentRepository{
@@ -77,6 +78,22 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 			session.close();
 		}
 		return "errorInDatabase";
+	}
+
+	@Override
+	public Student getStudentInfo(Account account) {
+		// TODO Auto-generated method stub
+		SqlSession session = getSqlSessionFactory().openSession();
+		try{
+			
+			StudentMapper studentMapper = session.getMapper(StudentMapper.class);
+			return studentMapper.getStudentWithUsername(account);
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		return null;
 	}
 
 }

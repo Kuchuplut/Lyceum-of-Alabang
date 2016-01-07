@@ -44,7 +44,7 @@ public class LoginAction implements Action, SessionAware{
 		if (strStatus.equals("Student") || strStatus.equals("Professor")){
 			
 			sessionMap.put("strUsername", getAccount().getStrUsername());
-			sessionMap.put("strAccountType", getAccount().getStrAccountType());
+			sessionMap.put("strAccountType", strStatus);
 			
 		}
 		

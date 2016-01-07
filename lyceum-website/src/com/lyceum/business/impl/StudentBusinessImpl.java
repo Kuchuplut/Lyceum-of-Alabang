@@ -3,6 +3,7 @@ package com.lyceum.business.impl;
 import com.lyceum.business.StudentBusiness;
 import com.lyceum.conversion.SmartCounter;
 import com.lyceum.dao.StudentRepository;
+import com.lyceum.model.Account;
 import com.lyceum.model.Student;
 
 public class StudentBusinessImpl implements StudentBusiness{
@@ -67,6 +68,22 @@ public class StudentBusinessImpl implements StudentBusiness{
 			e.printStackTrace();
 		}
 		return "errorInValidation";
+	}
+
+	@Override
+	public Student getStudent(Account account) {
+		// TODO Auto-generated method stub
+		try{
+			
+			if (account.getStrUsername().equals("") || account.getStrUsername() == null){
+				throw new IllegalArgumentException();
+			}
+			return studentRepository.getStudentInfo(account);
+			
+		}catch(IllegalArgumentException e){
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

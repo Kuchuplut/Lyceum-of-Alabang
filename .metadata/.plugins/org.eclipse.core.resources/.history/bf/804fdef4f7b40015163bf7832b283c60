@@ -1,0 +1,9 @@
+package com.lyceum.actions.home.student;
+
+public class StudentInitialization {
+
+	public String execute(){
+		return "success";
+	}
+	
+}

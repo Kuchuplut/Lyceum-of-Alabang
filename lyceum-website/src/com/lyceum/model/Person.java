@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class Person {
 
+	private Account account;
 	private int skPerson;
 	private Name name;
 	private String strAddress;
@@ -14,6 +15,12 @@ public class Person {
 	private String strEmail;
 	private String strContactNo;
 	
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
 	public Address getAddress() {
 		return address;
 	}
@@ -48,9 +55,7 @@ public class Person {
 		return new Date(birthday);
 	}
 	public void setBirthday(String birthday) throws Exception {
-			System.out.println("HERE");
 			this.birthday = new SimpleDateFormat("yyyy-MM-dd").parse(birthday).getTime();
-			System.out.println("Birthday -- "+getBirthday());
 	}
 	public String getStrEmail() {
 		return strEmail;

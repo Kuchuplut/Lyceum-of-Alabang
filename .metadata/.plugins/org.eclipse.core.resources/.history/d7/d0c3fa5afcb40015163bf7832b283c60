@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+     "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+   
+   <struts>
+   
+   	<package name="professorHome" extends="struts-default" namespace="/home_professor">
+   	
+   		<interceptors>
+   		
+   			<interceptor name="LoginInterceptor" class="com.lyceum.interceptors.LoginInterceptor"/>
+   			<interceptor name="ProfessorAccountTypeInterceptor" class="com.lyceum.interceptors.ProfessorAccountTypeInterceptor"/>
+   		
+   		</interceptors>
+   	
+   		<action name="*" class="com.lyceum.actions.home.professor.ProfessorInitialization">
+   			<result name="success">/home.jsp</result>
+   		</action>
+   	
+   	</package>
+   
+   </struts>
