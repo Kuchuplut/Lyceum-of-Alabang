@@ -46,7 +46,38 @@
 		</header>  
 		<article class="main">    
 			<div class="col s12" style="margin: 10px;">
-      <h4 class="yellow-text text-darken-4 col s12 light">Post something...</h4>
+      
+
+	      <div class="row white">
+	        <form class="col s12">
+	          <div class="row">
+	            <div class="input-field col s12">
+	              <textarea id="icon_prefix2" class="materialize-textarea" length="160"></textarea>
+	              <label for="icon_prefix2">Post something...</label>
+	            </div>
+
+	            <div class="row">
+	            	<div class="col s8">
+	            		<div class="file-field input-field">
+	            	     <div class="btn green">
+	            	       <i class="material-icons">attach_file</i>
+	            	       <input type="file" multiple>
+	            	     </div>
+	            	     <div class="file-path-wrapper">
+	            	       <input class="file-path validate" type="text" placeholder="Upload one or more files">
+	            	     </div>
+	            	 </div>
+	            	</div>
+	            	<div class="col s4">
+	            	<button class="waves-effect waves-dark btn-large" type="submit" name="action" align="bottom">Submit
+	            	  <i class="material-icons right">send</i>
+	            	</button>            	
+	            	</div>
+	            </div>
+	          </div>
+	        </form>
+	      </div>
+            
         <ul class="collection">
            <li class="collection-item avatar">
              <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" alt="" class="circle" width="42" height="42">
@@ -190,8 +221,13 @@
 			    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
 			  </p>
 			  
+<<<<<<< HEAD
+			  <h5 class="col s12 yellow-text text-darken-4">Juan D. Makakamot</h5>
+			  <h6 class="col s12 light">Student No: 2013-03554-MN-0</h6>
+=======
 			  <h5 class="col s12 yellow-text text-darken-4 light">${student.name}</h5>
 			  <h6 class="col s12 light">Student No: ${student.strStudentCode}</h6>
+>>>>>>> 9ec41077b1877e969121fec2a5ec6d18516ad87f
 			  <h6 class="col s12 light"><strong>About</strong></h6>
 			  <p class="col s12 light">
 			    Wala lang, nagiisip pa ko ng ilalagay dito blah blash kahit ano basta
