@@ -48,19 +48,19 @@
         <ul class="collapsible" data-collapsible="accordion">
             <li>
               <div class="collapsible-header"><i class="material-icons" style="font-size: 40px;">account_circle</i><h5>Miguel Malivhog</h5>
-              <p>January 6, 2015, 4:20pm</p> 
+              <h6>January 6, 2015, 4:20pm</h6> 
               </div>
               <div class="collapsible-body"><p>Hoy yung utang mo hayup ka, kinalimutan mo na ako hindi pa</p></div>
             </li>
             <li>
               <div class="collapsible-header"><i class="material-icons" style="font-size: 40px;">account_circle</i><h5>Joe Kalvoe</h5>
-              <p>January 6, 2015, 4:20pm</p> 
+              <h6>January 6, 2015, 4:20pm</h6> 
               </div>
               <div class="collapsible-body"><p>Pre pakopya naman nung assignment sa Arnis wala ako e</p></div>
             </li>
             <li>
               <div class="collapsible-header"><i class="material-icons" style="font-size: 40px;">account_circle</i><h5>Kris Makinis</h5>
-              <p>January 6, 2015, 4:20pm</p> 
+              <h6>January 6, 2015, 4:20pm</h6> 
               </div>
               <div class="collapsible-body"><p>Naka-enroll ka na kay sir kupal?</p></div>
             </li>
