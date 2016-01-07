@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<ul id="dropdown1" class="dropdown-content">
-		<li><a href="#!">Settings</a></li>
+		<li><a href="profile-student.jsp">Profile</a></li>
 		<li class="divider"></li>
 		<li><a href="#!">Log out</a></li>
 		<li class="divider"></li>
@@ -18,9 +18,10 @@
 	</ul>
 	<nav>
 		<div class="nav-wrapper white">
-		  <a href="#!" class="brand-logo left"><img src="<%=request.getContextPath()%>/pictures/icon.png"> </a>
+		  <a href="#!" class="brand-logo left"><img src="<%=request.getContextPath()%>/pictures/icon.png" class="banner"> </a>
+
 		  <ul class="right hide-on-med-and-down">
-		    <li><a href="home.jsp" class="yellow-text text-darken-2">BOARD<i class="material-icons left">list</i></a></li>
+		    <li><a href="home-student.jsp" class="yellow-text text-darken-2">BOARD<i class="material-icons left">list</i></a></li>
 		    <li class="yellow darken-2"><a href="grades.jsp" class="white-text text-darken-2">GRADES<i class="material-icons left">grade</i></a></li>
 		    <li><a href="quiz.jsp" class="yellow-text text-darken-2">QUIZZES<i class="material-icons left">assignment</i></a></li>
 		    <li><a href="message.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
@@ -42,7 +43,9 @@
 <body class="blue-grey lighten-5">
 	<div class="wrapper">  
 		<header class="header yellow darken-2">
-			<h4 class="white-text light col s12">GRADES</h4>
+      <div class="row">
+        <h3 class="white-text light" align="center">GRADES</h3>  
+      </div>
 		</header>  
 		<article class="main white">
       <h2 class="col s12 yellow-text text-darken-2">Grades</h2>    
@@ -109,14 +112,21 @@
   	  flex-flow: row wrap;
   	}
 
+
   	.wrapper > * {
   	  padding: 10px;
   	  flex: 1 100%;
   	}
 
-  	.header {
-  	  background: blue;
-  	}
+
+    .header{
+      background-color: white;
+    }
+
+    .banner{
+      width: 91%;
+      height: 91%;
+    }
 
   	.main {
   	  text-align: left;

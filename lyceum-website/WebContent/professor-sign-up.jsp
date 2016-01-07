@@ -32,19 +32,9 @@
 				<form class="col s12 ">
 					<div class="row">
 
-						<div class="input-field col s6">
+						<div class="input-field col s12">
 						<input id="studentNo" type="text" class="validate">
 						<label for="studentNo">Professor Number</label>
-						</div>
-
-						<div class="file-field input-field col s6">
-					      <div class="btn col s6">
-					        <span>Upload Picture</span>
-					        <input type="file" accept="image/*">
-					      </div>
-					      <div class="file-path-wrapper col s6">
-					        <input class="file-path validate" type="text" id="imagePath">
-					      </div>
 						</div>
 
 						<h6 class="col s12">Name</h6>

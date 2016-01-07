@@ -1137,3 +1137,12 @@
 0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:17:40 +0800] "GET /lyceum-website/login/ HTTP/1.1" 200 5833
 0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:17:45 +0800] "GET /lyceum-website/signup HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:17:46 +0800] "GET /lyceum-website/signup/ HTTP/1.1" 200 8180
+127.0.0.1 - - [07/Jan/2016:23:22:07 +0800] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:26 +0800] "GET /lyceum-website/signup/ HTTP/1.1" 200 7801
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:39 +0800] "GET /lyceum-website/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:39 +0800] "GET /lyceum-website/home/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:39 +0800] "GET /lyceum-website/login/ HTTP/1.1" 200 5833
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:45 +0800] "POST /lyceum-website/login/loginSubmit HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:45 +0800] "GET /lyceum-website/home/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:45 +0800] "GET /lyceum-website/home_student/ HTTP/1.1" 200 12328
+0:0:0:0:0:0:0:1 - - [07/Jan/2016:23:22:45 +0800] "GET /lyceum-website/home_student/compass/css3 HTTP/1.1" 200 12328
