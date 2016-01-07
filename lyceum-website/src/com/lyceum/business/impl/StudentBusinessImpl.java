@@ -1,11 +1,5 @@
 package com.lyceum.business.impl;
 
-import java.awt.Desktop;
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
-
 import com.lyceum.business.StudentBusiness;
 import com.lyceum.conversion.SmartCounter;
 import com.lyceum.dao.StudentRepository;
@@ -71,27 +65,11 @@ public class StudentBusinessImpl implements StudentBusiness{
 			if (student.getStrDisplayPhoto() == null || student.getStrDisplayPhoto().equals("")){
 				throw new IllegalArgumentException();
 			}
-			int intDisplayCode = studentRepository.getLastDisplayCode();
-			System.out.println(intDisplayCode);
-			
-			String strDisplayCode = "../display_photos/"+SmartCounter.newCode(Integer.toString(intDisplayCode)+".jpg");
-			
-			File imageSource = new File(student.getStrDisplayPhoto());
-			File imageDestination = new File(strDisplayCode);
-			FileUtils.copyFile(imageSource, imageDestination);
-			student.setStrDisplayPhoto(strDisplayCode);
-			Desktop.getDesktop().open(imageDestination);
-			
-			System.out.println(strDisplayCode);
-			System.out.println("SUCCESS");
 			return studentRepository.addStudent(student);
 			
 		}catch(IllegalArgumentException e){
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 		return "errorInValidation";
 	}
 

@@ -27,11 +27,7 @@
 			AND n.strMiddleName=#{name.strMiddleName}
 			AND n.strLastName=#{name.strLastName}
 		</select>
-		
-		<select id="getDisplayCode" resultMap="displayPhotoCodeResultMap">
-			SELECT skDisplayPhoto FROM tblDisplayPhoto ORDER BY skDisplayPhoto DESC LIMIT 1
-		</select>
-	
+
 	<!-- END SELECT QUERIES -->
 	
 	<!-- INSERT QUERIES -->

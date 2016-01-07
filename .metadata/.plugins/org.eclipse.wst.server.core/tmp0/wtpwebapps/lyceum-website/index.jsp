@@ -44,7 +44,7 @@
 				</div>
 
 				<div class="col s6">
-					<a class="waves-effect waves-light btn light-green darken-3" href="signup"><i class="material-icons right">assignment</i>register</a>
+					<a class="waves-effect waves-light btn light-green darken-3" href="<%=request.getContextPath()%>/signup"><i class="material-icons right">assignment</i>register</a>
 				</div>
 
 				<div class="col s6">

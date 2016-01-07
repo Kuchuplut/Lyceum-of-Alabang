@@ -2,23 +2,17 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="junit.framework.TestSuite"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Person"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.mappers.PersonMapper"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.mappers.StudentMapper"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisStudentRepositoryTest"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.StudentRepository"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="com.lyceum.services.StudentService"/>
 <fullyQualifiedTypeName name="com.sun.javafx.collections.MappingChange.Map"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.lyceum.model.Student"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Name"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Address"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.interceptor.AbstractInterceptor"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisClient"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.mappers.AccountMapper"/>
 <fullyQualifiedTypeName name="com.lyceum.dao.mybatis.MybatisStudentRepository"/>
@@ -34,5 +28,19 @@
 <fullyQualifiedTypeName name="com.lyceum.business.impl.AccountBusinessImpl"/>
 <fullyQualifiedTypeName name="com.lyceum.services.impl.AccountServiceImpl"/>
 <fullyQualifiedTypeName name="junit.framework.Test"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.interceptor.AbstractInterceptor"/>
+<fullyQualifiedTypeName name="com.lyceum.model.Student"/>
+<fullyQualifiedTypeName name="com.lyceum.services.StudentService"/>
 <fullyQualifiedTypeName name="com.lyceum.model.Account"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+<fullyQualifiedTypeName name="com.lyceum.conversion.SmartCounter"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.awt.Desktop"/>
+<fullyQualifiedTypeName name="org.apache.catalina.connector.Request"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
 </qualifiedTypeNameHistroy>

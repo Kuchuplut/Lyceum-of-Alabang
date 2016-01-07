@@ -1,8 +1,16 @@
 package com.lyceum.actions.signup;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
 import java.util.Map;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.lyceum.model.Student;
@@ -10,7 +18,7 @@ import com.lyceum.services.StudentService;
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class SignUpAction extends ActionSupport implements SessionAware, Action{
+public class SignUpAction extends ActionSupport implements SessionAware, Action, ServletRequestAware{
 
 	/**
 	 * 
@@ -19,6 +27,35 @@ public class SignUpAction extends ActionSupport implements SessionAware, Action{
 	private Student student;
 	private StudentService studentService;
 	private Map<String, Object> sessionMap;
+
+	private File userImage;
+    private String userImageContentType;
+    private String userImageFileName;
+    private ServletRequest servletRequest;
+	
+	public File getUserImage() {
+		return userImage;
+	}
+
+	public void setUserImage(File userImage) {
+		this.userImage = userImage;
+	}
+
+	public String getUserImageContentType() {
+		return userImageContentType;
+	}
+
+	public void setUserImageContentType(String userImageContentType) {
+		this.userImageContentType = userImageContentType;
+	}
+
+	public String getUserImageFileName() {
+		return userImageFileName;
+	}
+
+	public void setUserImageFileName(String userImageFileName) {
+		this.userImageFileName = userImageFileName;
+	}
 
 	public void setStudentService(StudentService studentService){
 		this.studentService = studentService;
@@ -32,11 +69,21 @@ public class SignUpAction extends ActionSupport implements SessionAware, Action{
 		this.student = student;
 	}
 
-	public String execute(){
+	public String execute() throws IOException{
 		
 		setStudentService((StudentService)ServletActionContext.getServletContext()
 				.getAttribute("studentService"));
-		System.out.println(getStudent().getStrDisplayPhoto());
+		
+		String strFileName = getUserImageFileName();
+		String strExtension = strFileName.substring(strFileName.lastIndexOf("."), strFileName.length());
+		
+		long longName=Calendar.getInstance().getTimeInMillis();
+		getStudent().setStrDisplayPhoto(longName+strExtension);
+		String strFilePath = servletRequest.getServletContext().getRealPath(File.separator)+"display_photos";
+		
+		File uploadFile = new File(strFilePath,getStudent().getStrDisplayPhoto());
+		FileUtils.copyFile(getUserImage(), uploadFile);
+		
 		String strStatus = studentService.registerStudent(getStudent());
 		
 		if (strStatus.equals("success")){
@@ -58,6 +105,12 @@ public class SignUpAction extends ActionSupport implements SessionAware, Action{
 	
 	public Map<String, Object> getSession(){
 		return sessionMap;
+	}
+
+	@Override
+	public void setServletRequest(HttpServletRequest servletRequest) {
+		// TODO Auto-generated method stub
+		this.servletRequest = servletRequest;
 	}
 
 }

@@ -30,7 +30,7 @@
 		<div class="container">
 			<div class="row">
 			<h4 class="col s12 yellow-text text-darken-2">Student Sign Up</h4>
-				<form class="col s12 " action="signupSubmit" method="post">
+				<form class="col s12 " action="signupSubmit" method="post" enctype="multipart/form-data">
 					<div class="row">
 
 						<div class="input-field col s6">
@@ -41,7 +41,7 @@
 						<div class="file-field input-field col s6">
 					      <div class="btn col s6">
 					        <span>Upload Picture</span>
-					        <input type="file" accept="image/*" name="student.strDisplayPhoto">
+					        <input type="file" accept="image/*" name="userImage">
 					      </div>
 					      <div class="file-path-wrapper col s6">
 					        <input class="file-path validate" type="text" id="imagePath">

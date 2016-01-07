@@ -18,7 +18,7 @@
 	</ul>
 	<nav>
 		<div class="nav-wrapper white">
-		  <a href="#!" class="brand-logo left"><img src="<%tle=request.getContextPath()%>/pictures/icon.png"> </a>
+		  <a href="#!" class="brand-logo left"><img src="<%=request.getContextPath()%>/pictures/icon.png"> </a>
 		  <ul class="right hide-on-med-and-down">
 		    <li><a href="home.jsp" class="yellow-text text-darken-2">BOARD<i class="material-icons left">list</i></a></li>
 		    <li class="yellow darken-2"><a href="grades.jsp" class="white-text text-darken-2">GRADES<i class="material-icons left">grade</i></a></li>

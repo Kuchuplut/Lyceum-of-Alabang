@@ -26,7 +26,7 @@
 		    <li><a href="message.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
 		    <li>
 			    <a href="about.jsp" class="yellow-text text-darken-2 small dropdown-button" data-activates="dropdown1">
-			    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle" alt="picture" height="42" width="42" align="middle"></a>
+			    <img src="${pageContext.request.contextPath}/display_photos/${student.strDisplayPhoto}" class="circle" alt="picture" height="42" width="42" align="middle"></a>
 		    </li>
 		  </ul>
 		</div>
@@ -46,10 +46,41 @@
 		</header>  
 		<article class="main">    
 			<div class="col s12" style="margin: 10px;">
-      <h4 class="yellow-text text-darken-4 col s12 light">Post something...</h4>
+      
+
+	      <div class="row white">
+	        <form class="col s12">
+	          <div class="row">
+	            <div class="input-field col s12">
+	              <textarea id="icon_prefix2" class="materialize-textarea" length="160"></textarea>
+	              <label for="icon_prefix2">Post something...</label>
+	            </div>
+
+	            <div class="row">
+	            	<div class="col s8">
+	            		<div class="file-field input-field">
+	            	     <div class="btn green">
+	            	       <i class="material-icons">attach_file</i>
+	            	       <input type="file" multiple>
+	            	     </div>
+	            	     <div class="file-path-wrapper">
+	            	       <input class="file-path validate" type="text" placeholder="Upload one or more files">
+	            	     </div>
+	            	 </div>
+	            	</div>
+	            	<div class="col s4">
+	            	<button class="waves-effect waves-dark btn-large" type="submit" name="action" align="bottom">Submit
+	            	  <i class="material-icons right">send</i>
+	            	</button>            	
+	            	</div>
+	            </div>
+	          </div>
+	        </form>
+	      </div>
+            
         <ul class="collection">
            <li class="collection-item avatar">
-             <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" alt="" class="circle" width="42" height="42">
+             <img src="${pageContext.request.contextPath}/display_photos/${student.strDisplayPhoto}" alt="" class="circle" width="42" height="42">
              <span class="title"><strong>Juan D. Makakamot</strong></span>
              <p>Ang kati kati na! Di ko na kaya! Urgh!<br>
                 11:11pm, Jan 2, 2016
@@ -187,9 +218,9 @@
 		<aside class="aside aside-1 white">
 			<div class="col s12 row">
 			  <p>
-			    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
+			    <img src="${pageContext.request.contextPath}/display_photos/${student.strDisplayPhoto}" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
 			  </p>
-			  
+		
 			  <h5 class="col s12 yellow-text text-darken-4 light">${student.name}</h5>
 			  <h6 class="col s12 light">Student No: ${student.strStudentCode}</h6>
 			  <h6 class="col s12 light"><strong>About</strong></h6>
