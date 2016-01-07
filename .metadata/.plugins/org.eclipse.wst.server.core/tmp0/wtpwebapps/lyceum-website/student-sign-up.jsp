@@ -41,7 +41,7 @@
 						<div class="file-field input-field col s6">
 					      <div class="btn col s6">
 					        <span>Upload Picture</span>
-					        <input type="file" accept="image/*">
+					        <input type="file" accept="image/*" name="student.strDisplayPhoto">
 					      </div>
 					      <div class="file-path-wrapper col s6">
 					        <input class="file-path validate" type="text" id="imagePath">

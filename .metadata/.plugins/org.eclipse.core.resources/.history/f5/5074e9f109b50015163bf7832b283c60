@@ -1,0 +1,13 @@
+package com.lyceum.experiment;
+
+import java.io.File;
+
+public class CopyFile {
+
+	public static void main(String[]args){
+		
+		File image1 = new File("C:\Users\kez layug\Pictures");
+		
+	}
+	
+}

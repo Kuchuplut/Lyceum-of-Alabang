@@ -10,6 +10,8 @@ public interface PersonMapper {
 	public void insertAddress(Person person);
 	public void insertEmail(Person person);
 	public void insertContactNo(Person person);
+	public void insertDisplayPhoto(Person person);
 	public int getSkPerson(Person person);
+	public String getDisplayCode();
 	
 }

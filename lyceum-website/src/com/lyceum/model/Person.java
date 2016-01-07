@@ -14,6 +14,14 @@ public class Person {
 	private String strGender;
 	private String strEmail;
 	private String strContactNo;
+	private String strDisplayPhoto;
+	
+	public void setStrDisplayPhoto(String strDisplayPhoto){
+		this.strDisplayPhoto = strDisplayPhoto;
+	}
+	public String getStrDisplayPhoto(){
+		return strDisplayPhoto;
+	}
 	
 	public Account getAccount() {
 		return account;

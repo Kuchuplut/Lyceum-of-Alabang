@@ -10,6 +10,10 @@
 		<resultMap id="personCodeResultMap" type="java.lang.Integer">
 			<result property="intSkPerson" column="skPerson"/>
 		</resultMap> 
+		
+		<resultMap id="displayPhotoCodeResultMap" type="java.lang.String">
+			<result property="strDisplayCode" column="skDisplayPhoto"/>
+		</resultMap>
 	
 	<!-- END RESULTMAP -->
 	
@@ -22,6 +26,10 @@
 			WHERE n.strFirstName=#{name.strFirstName}
 			AND n.strMiddleName=#{name.strMiddleName}
 			AND n.strLastName=#{name.strLastName}
+		</select>
+		
+		<select id="getDisplayCode" resultMap="displayPhotoCodeResultMap">
+			SELECT skDisplayPhoto FROM tblDisplayPhoto ORDER BY skDisplayPhoto DESC LIMIT 1
 		</select>
 	
 	<!-- END SELECT QUERIES -->
@@ -69,6 +77,11 @@
 			VALUES (#{strContactNo},
 					#{skPerson}
 			)
+		</insert>
+		
+		<insert id="insertDisplayPhoto">
+			INSERT INTO tblDisplayPhoto (strDisplayPhotoDir, skPersonFK)
+			VALUES (#{strDisplayPhoto}, #{skPerson})
 		</insert>
 	
 	<!-- END INSERT QUERIES -->

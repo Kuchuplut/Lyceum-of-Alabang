@@ -11,5 +11,6 @@ public interface StudentRepository {
 	public List<Student>getAllStudent();
 	public String getLastStudentCode();
 	public Student getStudentInfo(Account account);
+	public int getLastDisplayCode();
 	
 }

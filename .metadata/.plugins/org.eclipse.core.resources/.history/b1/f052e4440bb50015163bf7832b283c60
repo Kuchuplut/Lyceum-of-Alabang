@@ -1,0 +1,25 @@
+package com.lyceum.experiment;
+
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+
+public class CopyFile {
+
+	public static void main(String[]args){
+		
+		File image1 = new File("C:/Users/kez layug/Pictures/Capture");
+		File image2 = new File("/display/img1.jpeg");
+		
+		try{
+			
+			FileUtils.copyDirectory(image1, image2);
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		System.out.println("SUCCESS");
+		
+	}
+	
+}

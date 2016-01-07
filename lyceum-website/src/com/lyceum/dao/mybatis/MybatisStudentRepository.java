@@ -31,6 +31,7 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 			personMapper.insertAddress(student);
 			personMapper.insertContactNo(student);
 			personMapper.insertEmail(student);
+			personMapper.insertDisplayPhoto(student);
 			studentMapper.insertAccount(student);
 			studentMapper.insertStudent(student);
 			session.commit();
@@ -94,6 +95,25 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 		}
 		
 		return null;
+	}
+
+	@Override
+	public int getLastDisplayCode() {
+		// TODO Auto-generated method stub
+		SqlSession session = getSqlSessionFactory().openSession();
+		try{
+			
+			PersonMapper personMapper = session.getMapper(PersonMapper.class);
+			String strDisplayCode = personMapper.getDisplayCode();
+			if (strDisplayCode == null){
+				return 0;
+			}
+			return Integer.parseInt(strDisplayCode);
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("Catched");
+		}
+		return 0;
 	}
 
 }

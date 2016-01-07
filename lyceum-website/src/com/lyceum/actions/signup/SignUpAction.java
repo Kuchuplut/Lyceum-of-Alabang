@@ -36,17 +36,17 @@ public class SignUpAction extends ActionSupport implements SessionAware, Action{
 		
 		setStudentService((StudentService)ServletActionContext.getServletContext()
 				.getAttribute("studentService"));
-		
+		System.out.println(getStudent().getStrDisplayPhoto());
 		String strStatus = studentService.registerStudent(getStudent());
 		
 		if (strStatus.equals("success")){
 			sessionMap.put("strUsername", student.getAccount().getStrUsername());
-			sessionMap.put("strAccountType", student.getAccount().getStrAccountType());
-			sessionMap.put("name", student.getName());
+			sessionMap.put("strAccountType", "Student");
 		}
 		sessionMap = null;
 		
 		return strStatus;
+//		return "success";
 		
 	}
 
