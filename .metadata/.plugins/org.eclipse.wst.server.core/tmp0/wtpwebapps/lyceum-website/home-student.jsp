@@ -26,7 +26,7 @@
 			<li><a href="message.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
 			<li>
 				<a href="about.jsp" class="yellow-text text-darken-2 small dropdown-button" data-activates="dropdown1">
-				<img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle" alt="picture" height="42" width="42" align="middle"></a>
+				<img src="${pageContext.request.contextPath}/display_photos/${student.strDisplayPhoto}" class="circle" alt="picture" height="42" width="42" align="middle"></a>
 			</li>
 		  </ul>
 		</div>
@@ -218,16 +218,12 @@
 		<aside class="aside aside-1 white">
 			<div class="col s12 row">
 			  <p>
-				<img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
+				<img src="${pageContext.request.contextPath}/display_photos/${student.strDisplayPhoto}" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
 			  </p>
-			  
-<<<<<<< HEAD
-			  <h5 class="col s12 yellow-text text-darken-4">Juan D. Makakamot</h5>
-			  <h6 class="col s12 light">Student No: 2013-03554-MN-0</h6>
-=======
+	
 			  <h5 class="col s12 yellow-text text-darken-4 light">${student.name}</h5>
 			  <h6 class="col s12 light">Student No: ${student.strStudentCode}</h6>
->>>>>>> 9ec41077b1877e969121fec2a5ec6d18516ad87f
+
 			  <h6 class="col s12 light"><strong>About</strong></h6>
 			  <p class="col s12 light">
 				Wala lang, nagiisip pa ko ng ilalagay dito blah blash kahit ano basta
