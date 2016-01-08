@@ -21,8 +21,8 @@
 		  <a href="#!" class="brand-logo left"><img src="<%=request.getContextPath()%>/pictures/icon.png" class="banner"> </a>
 		  <ul class="right hide-on-med-and-down">
 		    <li><a href="home-student.jsp" class="yellow-text text-darken-2">BOARD<i class="material-icons left">list</i></a></li>
-		    <li class="yellow darken-2"><a href="grades.jsp" class="white-text text-darken-2">GRADES<i class="material-icons left">grade</i></a></li>
-		    <li><a href="quiz.jsp" class="yellow-text text-darken-2">QUIZZES<i class="material-icons left">assignment</i></a></li>
+		    <li><a href="grades.jsp" class="yellow-text text-darken-2">GRADES<i class="material-icons left">grade</i></a></li>
+		    <li  class="yellow darken-2"><a href="quiz.jsp" class="white-text text-darken-2">QUIZZES<i class="material-icons left">assignment</i></a></li>
 		    <li><a href="message.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
 		    <li>
 			    <a href="about.jsp" class="yellow-text text-darken-2 small dropdown-button" data-activates="dropdown1">
@@ -42,38 +42,10 @@
 <body class="blue-grey lighten-5">
 	<div class="wrapper">  
 		<header class="header yellow darken-2">
-      <div class="row">
-        <h3 class="white-text light" align="center">GRADES</h3>  
-      </div>
+			<h3 class="white-text light" align="center">QUIZ</h3>
 		</header>  
-		<article class="main white">
-      <h2 class="col s12 yellow-text text-darken-2">Grades</h2>    
-      <table class="responsive-table highlight">
-        <thead>
-          <tr>
-              <th data-field="id">Name</th>
-              <th data-field="name">Item Name</th>
-              <th data-field="price">Item Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
-        </tbody>
-      </table>
+		<article class="main">    
+			<p>Soon to come...</p>
 		</article>  
 		<aside class="aside aside-1 white">
 			<div class="col s12 row">
@@ -111,26 +83,22 @@
   	  flex-flow: row wrap;
   	}
 
-
   	.wrapper > * {
   	  padding: 10px;
   	  flex: 1 100%;
   	}
-
-
-    .header{
-      background-color: white;
-    }
-
     .banner{
       width: 91%;
       height: 91%;
     }
 
+  	.header{
+      background-color: white;
+    }
+
   	.main {
   	  text-align: left;
   	  background: transparent;
-      margin-top: 10px;
   	}
 
   	.aside-1 {

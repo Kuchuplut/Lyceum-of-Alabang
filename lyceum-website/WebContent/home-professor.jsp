@@ -20,10 +20,11 @@
 		<div class="nav-wrapper white">
 		  <a href="#!" class="brand-logo left"><img src="<%=request.getContextPath()%>/pictures/icon.png"> </a>
 		  <ul class="right hide-on-med-and-down">
-		    <li class="yellow darken-2"><a href="home.jsp" class="white-text text-darken-2">BOARD<i class="material-icons left">list</i></a></li>
-		    <li><a href="grades.jsp" class="yellow-text text-darken-2">GRADES<i class="material-icons left">grade</i></a></li>
-		    <li><a href="quiz.jsp" class="yellow-text text-darken-2">QUIZZES<i class="material-icons left">assignment</i></a></li>
-		    <li><a href="message.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
+        <li class="yellow darken-2"><a href="home-professor.jsp" class="white-text text-darken-2">BOARD<i class="material-icons left">list</i></a></li>
+		    <li><a href="class.jsp" class="yellow-text text-darken-2">CLASSES<i class="material-icons left">event_seat</i></a></li>
+		    <li><a href="quiz-professor.jsp" class="yellow-text text-darken-2">QUIZZES<i class="material-icons left">import_contacts</i></a></li>
+		    <li><a href="grade-professor.jsp" class="yellow-text text-darken-2">GRADE<i class="material-icons left">grade</i></a></li>
+		    <li><a href="message-professor.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
 		    <li>
 			    <a href="about.jsp" class="yellow-text text-darken-2 small dropdown-button" data-activates="dropdown1">
 			    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle" alt="picture" height="42" width="42" align="middle"></a>
@@ -106,7 +107,7 @@
              <img src="<%=request.getContextPath()%>/pictures/background1.jpg" height="50%" width="50%">
               <div class="fixed-action-btn horizontal secondary-content">
                  <a class="btn-floating btn-large red">
-                   <i class="large material-icons">mode_edit</i>
+                   <i class="large m4aterial-icons">mode_edit</i>
                  </a>
                  <ul>
                    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
