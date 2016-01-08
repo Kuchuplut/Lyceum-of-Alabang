@@ -12,6 +12,5 @@ public interface PersonMapper {
 	public void insertContactNo(Person person);
 	public void insertDisplayPhoto(Person person);
 	public int getSkPerson(Person person);
-	public String getDisplayCode();
 	
 }

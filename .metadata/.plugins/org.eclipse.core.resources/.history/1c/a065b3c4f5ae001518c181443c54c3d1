@@ -1,7 +1,0 @@
-package com.lyceum.dao;
-
-public interface StudentRepository {
-
-	public String addStudent(Student student);
-	
-}

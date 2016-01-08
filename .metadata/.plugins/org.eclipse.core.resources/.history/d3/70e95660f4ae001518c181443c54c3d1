@@ -1,7 +1,0 @@
-package com.lyceum.dao.mybatis.mappers;
-
-public interface StudentMapper {
-
-	public void insertStudent;
-	
-}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE struts PUBLIC 
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+     "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+   
+ <struts> 
+     <constant name="struts.enable.DynamicMethodInvocation" 
+         value="false" /> 
+     <constant name="struts.devMode" value="false" /> 
+     <constant name="struts.custom.i18n.resources" 
+         value="ApplicationResources" /> 
+   
+  	<package name="main" extends="struts-default" namespace="/"> 
+  	
+  		<interceptors> 
+  		 
+  			<interceptor name="loginInterceptor" class="com.lyceum.interceptors.LoginInterceptor"/> 
+  			 
+  			<interceptor-stack name="loginStack"> 
+  				<interceptor-ref name="loginInterceptor"/> 
+  				<interceptor-ref name="defaultStack"/> 
+  			</interceptor-stack> 
+  		 
+  		</interceptors>
+  	
+  		<action name="*" class="com.lyceum.actions.ChainAction">
+  			<result name="success" type="redirect">/home/</result>
+  		</action>
+ 		 
+ 		<action name="login" class="com.lyceum.actions.ChainAction">
+ 			<result name="success" type="redirect">/login/</result>
+ 		</action> 
+ 		 
+ 		<action name="signup" class="com.lyceum.actions.ChainAction"> 
+ 			<result name="success" type="redirect">/signup/</result> 
+ 		</action> 
+ 		 
+ 		<action name="home" class="com.lyceum.actions.ChainAction"> 
+ 			<result name="success" type="redirect">/home/</result> 
+ 		</action> 
+ 		 
+  	 	<action name="logout" class="com.lyceum.actions.login.LogoutAction">
+  	 		<interceptor-ref name="loginStack"/>
+  	 		<result name="success" type="redirect">/login/</result>
+  	 	</action>
+  	 	
+  	 	<action name="uploadFile" class="com.lyceum.actions.ChainAction">
+  			<result name="success">/UserImage.jsp</result>
+  		</action>
+  		
+  		<action name="fileUpload" class="com.lyceum.actions.home.FileUploadAction">
+  			<interceptor-ref name="fileUpload">
+	        	<param name="maximumSize">2097152</param>
+	       		<param name="allowedTypes">
+	         	   image/png,image/gif,image/jpeg,image/pjpeg
+	      	 	</param>
+		    </interceptor-ref>
+		    
+		    <result name="success">/SuccessUserImage.jsp</result>
+		    <result name="input">/UserImage.jsp</result>
+  			
+  		</action>
+  	 	
+  	</package> 
+  	
+    <include file="struts-login.xml"/>
+   
+  	<include file="struts-signup.xml"/>
+  	
+  	<include file="struts-student.xml"/>
+  	
+  	<include file="struts-home.xml"/>
+  	
+  	<include file="struts-professor.xml"/>
+  
+     
+ </struts> 

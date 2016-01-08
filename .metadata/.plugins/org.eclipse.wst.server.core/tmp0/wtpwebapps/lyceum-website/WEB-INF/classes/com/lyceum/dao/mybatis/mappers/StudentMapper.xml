@@ -25,6 +25,7 @@
 			<result property="strEmail" column="strEmailDesc"/>
 			<result property="strContactNo" column="strContactNoDesc"/>
 			<result property="birthday" column="datBirthday"/>
+			<result property="strDisplayPhoto" column="strDisplayPhotoDir"/>
 			<association property="name" resultMap="NameResultMap" column="n.skName" javaType="Name"/>
 		</resultMap>
 		
@@ -47,7 +48,8 @@
 				p.datBirthday,
 				a.strAddressText,
 				c.strContactNoDesc,
-				e.strEmailDesc
+				e.strEmailDesc,
+				dp.strDisplayPhotoDir
 			FROM tblStudent s
 			INNER JOIN tblPerson p ON s.skPersonFK = p.skPerson
 			INNER JOIN tblName n ON p.skNameFK = n.skName
@@ -55,6 +57,7 @@
 			INNER JOIN tblAddress a ON a.skPersonFK = p.skPerson
 			INNER JOIN tblContactNo c ON c.skPersonFK = p.skPerson
 			INNER JOIN tblEmail e ON e.skPersonFK = p.skPerson
+			INNER JOIN tblDisplayPhoto dp ON dp.skPersonFK = p.skPerson
 		
 		</select>
 		
@@ -75,7 +78,8 @@
 				p.datBirthday,
 				a.strAddressText,
 				c.strContactNoDesc,
-				e.strEmailDesc
+				e.strEmailDesc,
+				dp.strDisplayPhotoDir
 			FROM tblStudent s
 			INNER JOIN tblPerson p ON s.skPersonFK = p.skPerson
 			INNER JOIN tblName n ON p.skNameFK = n.skName
@@ -84,6 +88,7 @@
 			INNER JOIN tblContactNo c ON c.skPersonFK = p.skPerson
 			INNER JOIN tblEmail e ON e.skPersonFK = p.skPerson
 			INNER JOIN tblAccount acc ON acc.skAccount = s.skAccountFK
+			INNER JOIN tblDisplayPhoto dp ON dp.skPersonFK = p.skPerson
 			<if test="strUsername != null">
 				WHERE acc.strUsername = #{strUsername}
 			</if>

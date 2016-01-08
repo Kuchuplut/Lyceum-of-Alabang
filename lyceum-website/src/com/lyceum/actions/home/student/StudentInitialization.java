@@ -2,7 +2,11 @@ package com.lyceum.actions.home.student;
 
 import java.util.Map;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.lyceum.model.Account;
@@ -11,11 +15,12 @@ import com.lyceum.services.AccountService;
 import com.lyceum.services.StudentService;
 import com.opensymphony.xwork2.Action;
 
-public class StudentInitialization implements Action,SessionAware{
+public class StudentInitialization implements Action,SessionAware,ServletRequestAware{
 
 	private Map<String, Object> sessionMap;
 	private Student student;
 	private StudentService studentService;
+	private ServletRequest servletRequest;
 	
 	public void setStudent(Student student){
 		this.student = student;
@@ -43,6 +48,16 @@ public class StudentInitialization implements Action,SessionAware{
 	public void setSession(Map<String, Object> sessionMap) {
 		// TODO Auto-generated method stub
 		this.sessionMap = sessionMap;
+	}
+
+	@Override
+	public void setServletRequest(HttpServletRequest servletRequest) {
+		// TODO Auto-generated method stub
+		this.servletRequest = servletRequest;
+	}
+	
+	public ServletRequest getServletRequest(){
+		return servletRequest;
 	}
 	
 }
