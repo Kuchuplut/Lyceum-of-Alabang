@@ -1,0 +1,26 @@
+package com.lyceum.interceptors;
+
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
+
+public class AccountTypeInterceptor extends AbstractInterceptor{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public String intercept(ActionInvocation actionInvocation) throws Exception {
+		// TODO Auto-generated method stub
+		Map<String, Object> sessionMap = actionInvocation.getInvocationContext().getSession();
+		String strAccountType = (String) sessionMap.get("strAccountType");
+		String strUrl = ActionContext.getContext().getName();
+		System.out.println(strUrl);
+		return actionInvocation.invoke();
+	}
+
+}

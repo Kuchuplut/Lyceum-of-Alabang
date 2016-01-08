@@ -1,0 +1,5 @@
+package com.lyceum.actions.login;
+
+public class LoginAction {
+
+}

@@ -27,6 +27,7 @@
 	<mappers>
 		<mapper resource="com/lyceum/dao/mybatis/mappers/PersonMapper.xml"/>
 		<mapper resource="com/lyceum/dao/mybatis/mappers/StudentMapper.xml"/>
+		<mapper resource="com/lyceum/dao/mybatis/mappers/AccountMapper.xml"/>
 	</mappers>
 	
 </configuration>

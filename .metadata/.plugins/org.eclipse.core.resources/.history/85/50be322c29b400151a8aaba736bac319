@@ -1,0 +1,23 @@
+package com.lyceum.dao.mybatis;
+
+import com.lyceum.dao.AccountRepository;
+import com.lyceum.dao.mybatis.mappers.AccountMapper;
+import com.lyceum.model.Account;
+
+public class MybatisAccountRepository extends MybatisClient implements AccountRepository{
+
+	public MybatisAccountRepository(MybatisConnectionManager connectionManager) {
+		super(connectionManager);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String loginAccount(Account account) {
+		// TODO Auto-generated method stub
+		
+		AccountMapper accountMapper = getSqlSessionFactory().openSession().getMapper(AccountMapper.class);
+		
+		return null;
+	}
+
+}

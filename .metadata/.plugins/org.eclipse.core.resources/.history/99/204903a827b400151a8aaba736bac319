@@ -1,0 +1,7 @@
+package com.lyceum.dao.mybatis.mappers;
+
+public class AccountMapper {
+
+	public int accountExisting(Account account);
+	
+}

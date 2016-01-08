@@ -2,7 +2,6 @@ package com.lyceum.model;
 
 public class Student extends Person{
 
-	private Account account;
 	private String strStudentCode;
 	
 	public String getStrStudentCode() {
@@ -11,14 +10,9 @@ public class Student extends Person{
 	public void setStrStudentCode(String strStudentCode) {
 		this.strStudentCode = strStudentCode;
 	}
-	public Account getAccount() {
-		return account;
-	}
-	public void setAccount(Account account) {
-		this.account = account;
-	}
+	
 	public String toString(){
-		return this.strStudentCode+" -- "+this.account;
+		return this.strStudentCode+" -- "+getAccount();
 	}
 	
 }

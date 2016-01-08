@@ -1,0 +1,7 @@
+package com.lyceum.business;
+
+public class AccountBusiness{
+
+	public String loginAccount(Account account);
+	
+}

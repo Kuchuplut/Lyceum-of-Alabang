@@ -72,7 +72,7 @@ public class Name {
 	}
 	
 	public String toString(){
-		return getStrLastName()+", "+getStrFirstName()+" "+getStrMiddleName();
+		return getStrFirstName()+" "+getStrMiddleName().charAt(0)+". "+getStrLastName();
 	}
 	
 }

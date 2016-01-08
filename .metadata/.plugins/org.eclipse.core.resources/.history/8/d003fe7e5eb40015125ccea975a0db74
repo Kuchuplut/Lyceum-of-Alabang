@@ -1,0 +1,50 @@
+package com.lyceum.service.impl;
+
+import com.lyceum.business.AccountBusiness;
+import com.lyceum.business.impl.AccountBusinessImpl;
+import com.lyceum.dao.AccountRepository;
+import com.lyceum.dao.ConnectionManager;
+import com.lyceum.dao.mybatis.MybatisAccountRepository;
+import com.lyceum.dao.mybatis.MybatisConnectionManager;
+import com.lyceum.services.AccountService;
+import com.lyceum.services.impl.AccountServiceImpl;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class AccountServiceImplTest extends TestCase{
+
+	private AccountService accountService;
+	
+	public AccountServiceImplTest(String testName){
+		super(testName);
+	}
+	
+	@Override
+	public void setUp() throws Exception{
+		
+		ConnectionManager connectionManager = new MybatisConnectionManager();
+		connectionManager.establishConnection();
+		AccountRepository accountRepository = new MybatisAccountRepository((MybatisConnectionManager)connectionManager);
+		AccountBusiness accountBusiness = new AccountBusinessImpl();
+		((AccountBusinessImpl)accountBusiness).setAccountRepository(accountRepository);
+		accountService = new AccountServiceImpl();
+		((AccountServiceImpl)accountService).setAccountBusiness(accountBusiness);
+		
+	}
+	
+	public void loginAccountTest(){
+		
+	}
+	
+	public static Test suite(){
+		
+		TestSuite suite = new TestSuite();
+		suite.addTest(new AccountServiceImplTest(""));
+		
+		return suite;
+		
+	}
+	
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="com.lyceum.dao.mybatis.mappers.StudentMapper">
+	
+	<!-- RESULTMAPS -->
+	
+		<resultMap id="NameResultMap" type="Name">
+			<result property="strFirstName" column="strFirstName"/>
+			<result property="strMiddleName" column="strMiddleName"/>
+			<result property="strLastName" column="strLastName"/>
+		</resultMap>
+		
+		<resultMap id="AccountResultMap" type="Account">
+			<result property="strUsername" column="strUsername"/>
+			<result property="strAccountType" column="strAccountDesc"/>
+		</resultMap>
+	
+		<resultMap id="StudentResultMap" type="Student">
+			<result property="strStudentCode" column="strStudentCode" />
+			<result property="strAddress" column="strAddressText"/>
+			<result property="strGender" column="strGenderDesc"/>
+			<result property="strEmail" column="strEmailDesc"/>
+			<result property="strContactNo" column="strContactNoDesc"/>
+			<result property="birthday" column="datBirthday"/>
+			<association property="name" resultMap="NameResultMap" column="n.skName" javaType="Name"/>
+		</resultMap>
+		
+		<resultMap id="StudentCodeResultMap" type="java.lang.String">
+			<result property="strStudentCode" column="strStudentCode" />
+		</resultMap>
+	
+	<!-- END RESULTMAPS -->
+	
+	<!-- SELECT QUERIES -->
+	
+		<select id="getAllStudentInfo" resultMap="StudentResultMap">
+		
+			SELECT 
+				s.strStudentCode,
+				n.strFirstName,
+				n.strMiddleName,
+				n.strLastName,
+				g.strGenderDesc,
+				p.datBirthday,
+				a.strAddressText,
+				c.strContactNoDesc,
+				e.strEmailDesc
+			FROM tblStudent s
+			INNER JOIN tblPerson p ON s.skPersonFK = p.skPerson
+			INNER JOIN tblName n ON p.skNameFK = n.skName
+			INNER JOIN tblGender g ON p.strGenderCodeFK = g.strGenderCode
+			INNER JOIN tblAddress a ON a.skPersonFK = p.skPerson
+			INNER JOIN tblContactNo c ON c.skPersonFK = p.skPerson
+			INNER JOIN tblEmail e ON e.skPersonFK = p.skPerson
+		
+		</select>
+		
+		<select id="getLastStudentCode" resultMap="StudentCodeResultMap">
+		
+			SELECT strStudentCode FROM tblStudent ORDER BY strStudentCode DESC LIMIT 1
+		
+		</select>
+		
+		<select id="getStudentWithUsername">
+		
+			SELECT 
+				s.strStudentCode,
+				n.strFirstName,
+				n.strMiddleName,
+				n.strLastName,
+				g.strGenderDesc,
+				p.datBirthday,
+				a.strAddressText,
+				c.strContactNoDesc,
+				e.strEmailDesc
+			FROM tblStudent s
+			INNER JOIN tblPerson p ON s.skPersonFK = p.skPerson
+			INNER JOIN tblName n ON p.skNameFK = n.skName
+			INNER JOIN tblGender g ON p.strGenderCodeFK = g.strGenderCode
+			INNER JOIN tblAddress a ON a.skPersonFK = p.skPerson
+			INNER JOIN tblContactNo c ON c.skPersonFK = p.skPerson
+			INNER JOIN tblEmail e ON e.skPersonFK = p.skPerson
+			INNER JOIN tblAccount a ON a.skAccount = s.skAccountFK
+			<if test="strUsername != null">
+				WHERE str
+			</if>
+		
+		</select>
+	
+	<!-- END SELECT QUERIES -->
+	
+	<!-- INSERT QUERIES -->
+	
+		<insert id="insertStudent">
+			INSERT INTO tblStudent (strStudentCode, skPersonFK, skAccountFK)
+			VALUES (#{strStudentCode},#{skPerson},
+					(SELECT skAccount FROM tblAccount WHERE strUsername=#{account.strUsername} LIMIT 1)
+			)
+		</insert>
+	
+		<insert id="insertAccount">
+			INSERT INTO tblAccount (strUsername, strPassword, skAccountTypeFK)
+			VALUES (#{account.strUsername}, MD5(#{account.strPassword}),
+					(SELECT skAccountType FROM tblAccountType WHERE strAccountDesc='Student')
+					)
+		</insert>
+	
+	<!-- END INSERT QUERIES -->
+	
+	</mapper>

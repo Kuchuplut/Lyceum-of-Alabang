@@ -1,9 +1,0 @@
-package com.lyceum.dao.mybatis.mappers;
-
-import com.lyceum.model.Name;
-
-public interface NameMapper {
-
-	public void insertName(Name name);
-	
-}

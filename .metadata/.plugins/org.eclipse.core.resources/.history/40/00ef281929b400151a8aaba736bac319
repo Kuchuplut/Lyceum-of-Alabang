@@ -1,0 +1,12 @@
+package com.lyceum.dao.mybatis;
+
+import com.lyceum.dao.AccountRepository;
+
+public class MybatisAccountRepository extends MybatisClient implements AccountRepository{
+
+	public MybatisAccountRepository(MybatisConnectionManager connectionManager) {
+		super(connectionManager);
+		// TODO Auto-generated constructor stub
+	}
+
+}

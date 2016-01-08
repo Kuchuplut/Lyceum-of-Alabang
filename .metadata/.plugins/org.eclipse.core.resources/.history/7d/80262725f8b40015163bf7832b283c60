@@ -1,0 +1,12 @@
+package com.lyceum.actions.home.student;
+
+import com.opensymphony.xwork2.Action;
+
+public class StudentInitialization implements Action{
+
+	public String execute(){
+		String referrer = request.getHeader("referer"); 
+		return "success";
+	}
+	
+}

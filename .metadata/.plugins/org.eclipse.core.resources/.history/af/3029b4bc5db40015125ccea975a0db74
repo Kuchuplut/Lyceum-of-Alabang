@@ -1,0 +1,11 @@
+package com.lyceum.service.impl;
+
+import junit.framework.TestCase;
+
+public class AccountServiceImplTest extends TestCase{
+
+	public AccountServiceImplTest(String testName){
+		super(testName);
+	}
+	
+}

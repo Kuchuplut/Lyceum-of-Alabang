@@ -1,0 +1,5 @@
+package com.lyceum.interceptors;
+
+public class UserLoginInterceptor {
+
+}

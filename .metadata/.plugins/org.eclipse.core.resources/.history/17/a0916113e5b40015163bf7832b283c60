@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE struts PUBLIC 
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+     "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+   
+ <struts> 
+     <constant name="struts.enable.DynamicMethodInvocation" 
+         value="false" /> 
+     <constant name="struts.devMode" value="false" /> 
+     <constant name="struts.custom.i18n.resources" 
+         value="ApplicationResources" /> 
+   
+   <!-- MAIN PACKAGE -->
+   
+  	<package name="main" extends="struts-default" namespace="/"> 
+ 		 
+ 		<action name="login" class="com.lyceum.actions.ChainAction">
+ 			<result name="success" type="redirect">/login/</result>
+ 		</action> 
+ 		 
+ 		<action name="signup" class="com.lyceum.actions.ChainAction"> 
+ 			<result name="success" type="redirect">/signup/</result> 
+ 		</action> 
+ 		 
+ 		<action name="home" class="com.lyceum.actions.ChainAction"> 
+ 			<result name="success" type="redirect">/home/</result> 
+ 		</action> 
+ 		 
+  	</package> 
+  	
+   <!-- END OF MAIN PACKAGE -->
+   
+   <!-- LOG IN PACKAGE -->
+   
+    <package name="login" extends="struts-default" namespace="/login" >
+    
+    	<interceptors>
+    		
+    		<interceptor name="UserLoginInterceptor" class="com.lyceum.interceptors.UserLoginInterceptor"/>
+    		
+    		<interceptor-stack name="userLogin?">
+    			<interceptor-ref name="UserLoginInterceptor"/>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    
+    	<action name="" class="com.lyceum.actions.ChainAction">
+    		<interceptor-ref name="userLogin?"/>
+    	</action>
+    
+    </package>
+   
+   <!-- END OF LOG IN PACKAGE -->
+   
+   <!-- SIGN UP PACKAGE -->
+   
+  	<package name="signUp" extends="struts-default" namespace="/signup"> 
+  		 
+  		<action name="" class="com.lyceum.actions.signup.SignUpInitializeAction"> 
+  			<interceptor-ref name="logger"/> 
+  			<result name="success">/student-sign-up.jsp</result> 
+  			<result name="errorInDatabase">/error-database.jsp</result> 
+  		</action> 
+  		 
+  		<action name="signupSubmit" class="com.lyceum.actions.signup.SignUpAction"> 
+  			<result name="success" type="redirect">/home/</result> 
+  			<result name="errorInValidation">/student-sign-up.jsp</result> 
+  			<result name="errorInSaving">/error-database.jsp</result> 
+  			<result name="input" type="redirect">/student-sign-up.jsp</result> 
+  			<result name="invalid.token">/error-token.jsp</result> 
+  		</action> 
+  	 
+  	</package> 
+  	
+  	<!-- END OF SIGNUP PACKAGE -->
+  	 
+  	<!-- HOME PACKAGE --> 
+  	 
+  	<package name="home" extends="struts-default" namespace="/home"> 
+  	 
+  		<interceptors> 
+  		 
+  			<interceptor name="loginInterceptor" class="com.lyceum.interceptors.LoginInterceptor"/> 
+  			 
+  			<interceptor-stack name="loginStack"> 
+  				<interceptor-ref name="loginInterceptor"/> 
+  				<interceptor-ref name="defaultStack"/> 
+  			</interceptor-stack> 
+  		 
+  		</interceptors> 
+  	 
+  		<action name="" class="com.lyceum.actions.home.HomeInitializationAction"> 
+  			<interceptor-ref name="loginStack"/> 
+  			<result name="success">/home.jsp</result> 
+  			<result name="login" type="redirect">/</result> 
+  		</action> 
+  	 
+  	</package> 
+  
+  <!-- END OF HOME PACKAGE -->
+     
+ </struts> 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+     "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+   
+   <struts>
+   
+   	<package name="login" extends="struts-default" namespace="/login" >
+    
+    	<interceptors>
+    		
+    		<interceptor name="UserLoginInterceptor" class="com.lyceum.interceptors.UserLoginInterceptor"/>
+    		<interceptor name="loginInterceptor" class="com.lyceum.interceptors.LoginInterceptor"/> 
+    		
+    		<interceptor-stack name="userLogin?">
+    			<interceptor-ref name="UserLoginInterceptor"/>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors>
+    
+    	<action name="*" class="com.lyceum.actions.ChainAction">
+    		<interceptor-ref name="userLogin?"/>
+    		<result name="success">/index.jsp</result>
+    		<result name="exist" type="redirect">/home/</result>
+    	</action>
+    	
+    	<action name="loginSubmit" class="com.lyceum.actions.login.LoginAction">
+    		<interceptor-ref name="userLogin?"/>
+    		<interceptor-ref name="tokenSession"/>
+			<result name="Student" type="redirect">/home/</result>
+			<result name="accountNotExist" type="redirect">/login/</result>
+			<result name="incorrectPassword" type="redirect">/login/</result>
+			<result name="databaseError">/error-database.jsp</result>
+			<result name="invalid.token">/error-token.jsp</result>
+    	</action>
+    
+    </package>
+   
+   </struts>
