@@ -20,7 +20,7 @@
    
    		<action name="*" class="com.lyceum.actions.home.student.StudentInitialization">
    			<interceptor-ref name="checkAccess"/>
-   			<result name="success">/home.jsp</result>
+   			<result name="success">/home-student.jsp</result>
    			<result name="access.denied">/error-access-denied.jsp</result>
    			<result name="login" type="redirect">/login/</result>
    			<result name="errorInDatabase">/error-database.jsp</result>

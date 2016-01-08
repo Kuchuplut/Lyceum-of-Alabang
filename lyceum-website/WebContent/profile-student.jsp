@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<ul id="dropdown1" class="dropdown-content">
-		<li><a href="profile-student.jsp">Profile</a></li>
+		<li><a href="#!">Settings</a></li>
 		<li class="divider"></li>
 		<li><a href="#!">Log out</a></li>
 		<li class="divider"></li>
@@ -22,7 +22,7 @@
 		  <ul class="right hide-on-med-and-down">
 		    <li><a href="home-student.jsp" class="yellow-text text-darken-2">BOARD<i class="material-icons left">list</i></a></li>
 		    <li><a href="grades.jsp" class="yellow-text text-darken-2">GRADES<i class="material-icons left">grade</i></a></li>
-		    <li  class="yellow darken-2"><a href="quiz.jsp" class="white-text text-darken-2">QUIZZES<i class="material-icons left">assignment</i></a></li>
+		    <li><a href="quiz.jsp" class="yellow-text text-darken-2">QUIZZES<i class="material-icons left">assignment</i></a></li>
 		    <li><a href="message.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
 		    <li>
 			    <a href="about.jsp" class="yellow-text text-darken-2 small dropdown-button" data-activates="dropdown1">
@@ -42,25 +42,51 @@
 <body class="blue-grey lighten-5">
 	<div class="wrapper">  
 		<header class="header yellow darken-2">
-			<h3 class="white-text light" align="center">QUIZ</h3>
+			<h3 class="white-text light" align="center">PROFILE</h3>
 		</header>  
 		<article class="main">    
-			<p>Soon to come...</p>
+			<div class="container">
+        <div class="row">
+          <form action="#" class="col s12">
+              <div class="row">
+                  <div class="col s12" align="center">
+                    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle" width="300" height="300">
+                  </div>
+
+                  <div class="col s8" align="center">
+                      <div class="file-field input-field">
+                        <div class="btn">
+                          <span>File</span>
+                          <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text">
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                <h3 class="light col s12">About</h3>
+                <div class="input-field col s12">
+                         <textarea id="textarea1" class="materialize-textarea"></textarea>
+                         <label for="textarea1">Textarea</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <h3 class="light col s12">Hobbies</h3>
+                <div class="input-field col s12">
+                         <textarea id="textarea1" class="materialize-textarea"></textarea>
+                         <label for="textarea1">Textarea</label>
+                </div>
+              </div>
+              
+            </form>
+        </div>   
+      </div>
 		</article>  
-		<aside class="aside aside-1 white">
-			<div class="col s12 row">
-			  <p>
-			    <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
-			  </p>
-			  
-			  <h5 class="col s12 yellow-text text-darken-4 light">Juan D. Makakamot</h5>
-			  <h6 class="col s12 light">Student No: 2013-03554-MN-0</h6>
-			  <h6 class="col s12 light"><strong>About</strong></h6>
-			  <p class="col s12 light">
-			    Wala lang, nagiisip pa ko ng ilalagay dito blah blash kahit ano basta
-			  </p>
-			</div>
-		</aside>
+
 		<aside class="aside aside-2">
 			<h3 class="yellow-text text-darken-2 col s12 light">Tutorials</h3>
 			<a class="col s12" href="#">
@@ -98,14 +124,11 @@
 
   	.main {
   	  text-align: left;
-  	  background: transparent;
+  	  background: white;
+      margin: 10px;
+      width: 100%;
   	}
 
-  	.aside-1 {
-  	  background: green;
-  	  width: 30px;
-  	  margin: 10px;
-  	}
 
   	.aside-2 {
   	  background: white;
@@ -122,10 +145,9 @@
 
   	@media all and (min-width: 800px) {
   	  .main    { flex: 3 0px; }
-  	  .aside-1 { order: 1; } 
-  	  .main    { order: 2; }
-  	  .aside-2 { order: 3; }
-  	  .footer  { order: 4; }
+  	  .main    { order: 1; }
+  	  .aside-2 { order: 2; }
+  	  .footer  { order: 3; }
   	}
 
   

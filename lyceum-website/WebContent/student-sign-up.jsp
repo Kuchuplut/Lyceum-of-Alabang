@@ -33,20 +33,10 @@
 				<form class="col s12 " action="signupSubmit" method="post">
 					<div class="row">
 
-						<div class="input-field col s6">
+						<div class="input-field col s12">
 						<input id="studentNo" type="text" class="validate" value="${strStudentCode}" name="student.strStudentCode">
 						<label for="studentNo">Student Number</label>
 						</div>
-
-						<div class="file-field input-field col s6">
-					      <div class="btn col s6">
-					        <span>Upload Picture</span>
-					        <input type="file" accept="image/*" name="student.strDisplayPhoto">
-					      </div>
-					      <div class="file-path-wrapper col s6">
-					        <input class="file-path validate" type="text" id="imagePath">
-					      </div>
-						 </div>
 
 						<h6 class="col s12">Name</h6>
 						<div class="input-field col s4">
