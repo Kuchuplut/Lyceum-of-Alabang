@@ -5,7 +5,7 @@
    
    <struts>
    
-   	<package name="professorHome" extends="struts-default" namespace="/home_professor">
+   	<package name="professorHome" extends="struts-default" namespace="/home-professor">
    	
    		<interceptors>
    		

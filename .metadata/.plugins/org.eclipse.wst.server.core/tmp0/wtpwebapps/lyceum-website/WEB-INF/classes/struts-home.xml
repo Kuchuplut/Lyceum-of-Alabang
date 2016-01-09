@@ -21,8 +21,8 @@
   	 
   		<action name="*" class="com.lyceum.actions.home.HomeInitializationAction"> 
   			<interceptor-ref name="loginStack"/> 
-  			<result name="Student" type="redirect">/home_student/</result>
-  			<result name="Professor" type="redirect">/home_professor/</result>
+  			<result name="Student" type="redirect">/home-student/</result>
+  			<result name="Professor" type="redirect">/home-professor/</result>
   			<result name="login" type="redirect">/login/</result> 
   		</action>
   	 

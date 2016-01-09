@@ -7,8 +7,8 @@
 	
 	<!-- RESULTMAP -->
 	
-		<resultMap id="personCodeResultMap" type="java.lang.Integer">
-			<result property="intSkPerson" column="skPerson"/>
+		<resultMap id="personCodeResultMap" type="java.lang.String">
+			<result property="strSkPerson" column="skPerson"/>
 		</resultMap> 
 		
 		<resultMap id="displayPhotoCodeResultMap" type="java.lang.String">

@@ -2,7 +2,6 @@ package com.lyceum.dao.mybatis.mappers;
 
 import java.util.List;
 
-import com.lyceum.model.Account;
 import com.lyceum.model.Student;
 
 public interface StudentMapper {
@@ -11,6 +10,6 @@ public interface StudentMapper {
 	public void insertAccount(Student student);
 	public List<Student> getAllStudentInfo();
 	public String getLastStudentCode();
-	public Student getStudentWithUsername(Account account);
+	public Student getStudent(Student student);
 	
 }

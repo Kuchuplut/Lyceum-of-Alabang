@@ -1,0 +1,7 @@
+package com.lyceum.actions.home.student;
+
+import org.apache.struts2.interceptor.ServletRequestAware;
+
+public class StudentProfileChangeAction implements ServletRequestAware, Action{
+
+}

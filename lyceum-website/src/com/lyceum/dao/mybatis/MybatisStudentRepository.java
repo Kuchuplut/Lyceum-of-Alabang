@@ -27,11 +27,10 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 			StudentMapper studentMapper = session.getMapper(StudentMapper.class);
 			personMapper.insertName(student.getName());
 			personMapper.insertPerson(student);
-			student.setSkPerson(personMapper.getSkPerson(student));
+			student.setSkPerson(Integer.parseInt(personMapper.getSkPerson(student)));
 			personMapper.insertAddress(student);
 			personMapper.insertContactNo(student);
 			personMapper.insertEmail(student);
-			personMapper.insertDisplayPhoto(student);
 			studentMapper.insertAccount(student);
 			studentMapper.insertStudent(student);
 			session.commit();
@@ -82,19 +81,40 @@ public class MybatisStudentRepository extends MybatisClient implements StudentRe
 	}
 
 	@Override
-	public Student getStudentInfo(Account account) {
+	public Student getStudentInfo(Student student) {
 		// TODO Auto-generated method stub
 		SqlSession session = getSqlSessionFactory().openSession();
 		try{
 			
 			StudentMapper studentMapper = session.getMapper(StudentMapper.class);
-			return studentMapper.getStudentWithUsername(account);
+			return studentMapper.getStudent(student);
 			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
 		return null;
+	}
+
+	@Override
+	public String addDisplayPhoto(Student student) {
+		// TODO Auto-generated method stub
+		SqlSession session = getSqlSessionFactory().openSession();
+		try{
+			
+			PersonMapper personMapper = session.getMapper(PersonMapper.class);
+			student.setSkPerson(Integer.parseInt(personMapper.getSkPerson(student)));
+			personMapper.insertDisplayPhoto(student);
+			session.commit();
+			return "success";
+			
+		}catch(Exception e){
+			e.printStackTrace();
+			session.rollback();
+		}finally{
+			session.close();
+		}
+		return "errorInDatabase";
 	}
 	
 }

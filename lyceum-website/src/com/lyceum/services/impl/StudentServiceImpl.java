@@ -1,7 +1,6 @@
 package com.lyceum.services.impl;
 
 import com.lyceum.business.StudentBusiness;
-import com.lyceum.model.Account;
 import com.lyceum.model.Student;
 import com.lyceum.services.StudentService;
 
@@ -26,9 +25,15 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	@Override
-	public Student getStudent(Account account) {
+	public Student getStudent(Student student) {
 		// TODO Auto-generated method stub
-		return studentBusiness.getStudent(account);
+		return studentBusiness.getStudent(student);
+	}
+
+	@Override
+	public String setDisplayPhoto(Student student) {
+		// TODO Auto-generated method stub
+		return studentBusiness.setDisplayPhoto(student);
 	}
 	
 }

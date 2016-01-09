@@ -67,7 +67,7 @@
 		
 		</select>
 		
-		<select id="getStudentWithUsername" resultMap="StudentResultMap">
+		<select id="getStudent" resultMap="StudentResultMap">
 		
 			SELECT 
 				s.strStudentCode,
@@ -85,12 +85,12 @@
 			INNER JOIN tblName n ON p.skNameFK = n.skName
 			INNER JOIN tblGender g ON p.strGenderCodeFK = g.strGenderCode
 			INNER JOIN tblAddress a ON a.skPersonFK = p.skPerson
-			INNER JOIN tblContactNo c ON c.skPersonFK = p.skPerson
-			INNER JOIN tblEmail e ON e.skPersonFK = p.skPerson
+			LEFT JOIN tblContactNo c ON c.skPersonFK = p.skPerson
+			LEFT JOIN tblEmail e ON e.skPersonFK = p.skPerson
 			INNER JOIN tblAccount acc ON acc.skAccount = s.skAccountFK
-			INNER JOIN tblDisplayPhoto dp ON dp.skPersonFK = p.skPerson
-			<if test="strUsername != null">
-				WHERE acc.strUsername = #{strUsername}
+			LEFT JOIN tblDisplayPhoto dp ON dp.skPersonFK = p.skPerson
+			<if test="account.strUsername != null">
+				WHERE acc.strUsername = #{account.strUsername}
 			</if>
 		
 		</select>

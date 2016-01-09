@@ -47,7 +47,7 @@
 		<article class="main">    
 			<div class="container">
         <div class="row">
-          <form action="#" class="col s12">
+          <form action="<%=request.getContextPath()%>/home-student/change-profile-action" class="col s12" enctype="multipart/form-data" method="post">
               <div class="row">
                   <div class="col s12" align="center">
                     <img src="<%=request.getContextPath()%>/pictures/pictureSample.jpg" class="circle" width="300" height="300">
@@ -57,7 +57,7 @@
                       <div class="file-field input-field">
                         <div class="btn">
                           <span>File</span>
-                          <input type="file">
+                          <input type="file" name="userImage">
                         </div>
                         <div class="file-path-wrapper">
                           <input class="file-path validate" type="text">
@@ -81,7 +81,7 @@
                          <label for="textarea1">Textarea</label>
                 </div>
               </div>
-              
+              <input type="submit" value="Change Profile">
             </form>
         </div>   
       </div>
@@ -92,7 +92,7 @@
 			<a class="col s12" href="#">
 			  <i class="material-icons large center-align yellow-text text-darken-2 " style="display: block; margin-left: auto; margin-rght: auto;">live_tv</i>
 			</a>
-			<h5 class="col s12 light">Watch Video Tuorials Online!</h5>
+			<h5 class="col s12 light">Watch Video Tutorials Online!</h5>
 		</aside>
 
   <style type="text/css">

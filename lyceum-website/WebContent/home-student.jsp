@@ -26,7 +26,7 @@
 			<li><a href="message.jsp" class="yellow-text text-darken-2">MESSAGES<i class="material-icons left">email</i></a></li>
 			<li>
 				<a href="about.jsp" class="yellow-text text-darken-2 small dropdown-button" data-activates="dropdown1">
-				<img src="${pageContext.request.contextPath}/display_photos/${student.strDisplayPhoto}" class="circle" alt="picture" height="42" width="42" align="middle"></a>
+				<img src="<%=request.getContextPath()%>/display_photos/${student.strDisplayPhoto}" class="circle" alt="picture" height="42" width="42" align="middle"></a>
 			</li>
 		  </ul>
 		</div>
@@ -218,7 +218,7 @@
 		<aside class="aside aside-1 white">
 			<div class="col s12 row">
 			  <p>
-				<img src="${pageContext.request.contextPath}/display_photos/${student.strDisplayPhoto}" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
+				<img src="<%=request.getContextPath()%>/display_photos/${student.strDisplayPhoto}" class="circle center-align" width="150" height="150" style="display: block; margin-left: auto; margin-right: auto;">
 			  </p>
 	
 			  <h5 class="col s12 yellow-text text-darken-4 light">${student.name}</h5>

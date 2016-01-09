@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+     "http://struts.apache.org/dtds/struts-2.0.dtd"> 
+   
+   <struts>
+   
+   	<package name="studentHome" extends="struts-default" namespace="/home-student">
+   
+   		<interceptors>
+   			<interceptor name="StudentAccountTypeInterceptor" class="com.lyceum.interceptors.StudentAccountTypeInterceptor"/>
+   			<interceptor name="LoginInterceptor" class="com.lyceum.interceptors.LoginInterceptor"/>
+   			
+   			<interceptor-stack name="checkAccess">
+   				<interceptor-ref name="LoginInterceptor"/>
+   				<interceptor-ref name="StudentAccountTypeInterceptor"/>
+   				<interceptor-ref name="defaultStack"/>
+   			</interceptor-stack>
+   		</interceptors>
+   		
+   		<default-interceptor-ref name="checkAccess"/>
+   
+   		<action name="*" class="com.lyceum.actions.home.student.StudentInitialization">
+   			<result name="success">/home-student.jsp</result>
+   			<result name="access.denied">/error-access-denied.jsp</result>
+   			<result name="login" type="redirect">/login/</result>
+   			<result name="errorInDatabase">/error-database.jsp</result>
+   		</action>
+   		
+   		<action name="change-profile" class="com.lyceum.actions.ChainAction">
+   			<result name="success">/profile-student.jsp</result>
+   		</action>
+   		
+   		<action name="change-profile" class="com.lyceum.actions.home.student.StudentProfileChangeAction">
+   			<interceptor-ref name="checkAccess"/>
+   			<interceptor-ref name="fileUpload">
+   				<param name="maximumSize">2097152</param>
+	       		<param name="allowedTypes">
+	         	   image/png,image/gif,image/jpeg,image/pjpeg
+	      	 	</param>
+   			</interceptor-ref>
+   			<interceptor-ref name="defaultStack"/>
+   			<result name="success">/home-student/</result>
+   			<result name="input">/home-student/change-profile</result>
+   		</action>
+   
+   	</package>
+   
+   </struts>

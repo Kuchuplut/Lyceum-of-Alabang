@@ -3,7 +3,6 @@ package com.lyceum.business.impl;
 import com.lyceum.business.StudentBusiness;
 import com.lyceum.conversion.SmartCounter;
 import com.lyceum.dao.StudentRepository;
-import com.lyceum.model.Account;
 import com.lyceum.model.Student;
 
 public class StudentBusinessImpl implements StudentBusiness{
@@ -62,9 +61,6 @@ public class StudentBusinessImpl implements StudentBusiness{
 			if (student.getName().getStrLastName() == null || student.getName().getStrLastName().equals("")){
 				throw new IllegalArgumentException();
 			}
-			if (student.getStrDisplayPhoto() == null || student.getStrDisplayPhoto().equals("")){
-				throw new IllegalArgumentException();
-			}
 			return studentRepository.addStudent(student);
 			
 		}catch(IllegalArgumentException e){
@@ -74,19 +70,25 @@ public class StudentBusinessImpl implements StudentBusiness{
 	}
 
 	@Override
-	public Student getStudent(Account account) {
+	public Student getStudent(Student student) {
 		// TODO Auto-generated method stub
 		try{
 			
-			if (account.getStrUsername().equals("") || account.getStrUsername() == null){
+			if (student.getAccount().getStrUsername().equals("") || student.getAccount().getStrUsername() == null){
 				throw new IllegalArgumentException();
 			}
-			return studentRepository.getStudentInfo(account);
+			return studentRepository.getStudentInfo(student);
 			
 		}catch(IllegalArgumentException e){
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	@Override
+	public String setDisplayPhoto(Student student) {
+		// TODO Auto-generated method stub
+		return studentRepository.addDisplayPhoto(student);
 	}
 
 }

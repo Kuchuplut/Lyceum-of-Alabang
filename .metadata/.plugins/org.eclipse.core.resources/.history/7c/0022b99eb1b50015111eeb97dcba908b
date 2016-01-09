@@ -1,0 +1,36 @@
+package com.lyceum.actions.home.student;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.ServletRequestAware;
+
+import com.lyceum.model.Student;
+import com.lyceum.services.StudentService;
+import com.opensymphony.xwork2.Action;
+
+public class StudentProfileChangeAction implements ServletRequestAware, Action{
+
+	private ServletRequest servletRequest;
+	private Student student;
+	private StudentService studentService;
+	
+	@Override
+	public void setServletRequest(HttpServletRequest servletRequest) {
+		// TODO Auto-generated method stub
+		this.servletRequest = servletRequest;
+	}
+
+	@Override
+	public String execute() throws Exception {
+		// TODO Auto-generated method stub
+		
+		studentService = (StudentService)ServletActionContext.getServletContext()
+				.getAttribute("studentService");
+		
+		
+		return "success";
+	}
+
+}

@@ -11,7 +11,6 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.lyceum.model.Account;
 import com.lyceum.model.Student;
-import com.lyceum.services.AccountService;
 import com.lyceum.services.StudentService;
 import com.opensymphony.xwork2.Action;
 
@@ -36,7 +35,9 @@ public class StudentInitialization implements Action,SessionAware,ServletRequest
 				.getAttribute("studentService");
 		Account account = new Account();
 		account.setStrUsername((String)sessionMap.get("strUsername"));
-		Student student = studentService.getStudent(account);
+		Student studentInput = new Student();
+		studentInput.setAccount(account);
+		Student student = studentService.getStudent(studentInput);
 		if (student == null){
 			return "errorInDatabase";
 		}

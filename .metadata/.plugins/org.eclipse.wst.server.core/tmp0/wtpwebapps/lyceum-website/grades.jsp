@@ -49,7 +49,7 @@
 		</header>  
 		<article class="main white">
       <h2 class="col s12 yellow-text text-darken-2">Grades</h2>    
-      <table>
+      <table class="responsive-table highlight">
         <thead>
           <tr>
               <th data-field="id">Name</th>
